@@ -1,0 +1,56 @@
+/* POLIPD TECC premium mobile-first enhancements · 2026 */
+:root{--premium-ink:#16211f;--mint:#a3e9d5;--lilac:#d9c7fa}
+html{scroll-padding-top:90px}body{overflow-x:hidden;-webkit-text-size-adjust:100%}
+.wrap{max-width:1220px}.topbar{position:relative;gap:14px;min-width:0;z-index:40;background:#fff}
+.topbar .brand{flex-shrink:0}.topbar .nav{min-width:0}.topbar .mobile-language{display:none}
+:where(a,button,select,summary):focus-visible{outline:3px solid #0c9487;outline-offset:3px}
+:where(.room-card,.doccard,.gallerybox){transition:transform .22s ease,box-shadow .22s ease}
+.room-card{border:1px solid #e7eae7;border-radius:24px;background:#fff;box-shadow:0 14px 42px #1528250b}
+.room-card:hover{transform:translateY(-5px);box-shadow:0 22px 54px #15282519}
+.room-art.photo-cover{height:clamp(230px,33vw,395px);justify-content:flex-start;align-items:flex-end;isolation:isolate;background:#c8ece0}
+.room-art.photo-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .5s ease}
+.room-card:hover .room-art.photo-cover img{transform:scale(1.035)}
+.room-art.photo-cover::before{content:"";position:absolute;inset:0;width:auto;aspect-ratio:auto;border:0;border-radius:0;box-shadow:none;background:linear-gradient(180deg,rgba(0,0,0,.32),transparent 40%,rgba(0,0,0,.65));z-index:-1}
+.room-art.photo-cover .tilt{top:22px;left:22px;color:#fff;background:#101b1a75;border:1px solid #ffffff66;border-radius:50px;padding:8px 12px;letter-spacing:.7px}
+.room-art.photo-cover strong{font-size:clamp(32px,4.5vw,61px);letter-spacing:-2.5px;line-height:1.1;color:#fff;padding:24px;text-shadow:0 2px 25px #0007}
+.room-info{background:#fff;padding:22px 24px}.room-info h3{font-size:clamp(22px,2.5vw,29px)}
+.choice-grid{gap:20px}.cmp{overflow:hidden;border-radius:20px;border:1px solid #e6eae6}.compare-intro{margin-bottom:22px}.compare-intro .lead{max-width:680px}
+.herofig{box-shadow:0 20px 55px #091b1913}.fact,.metric{border:1px solid #e9ece9;border-radius:16px}
+.tabpanel,.rl,.panels,.report-section{min-width:0}.tabpanel img{height:auto}
+.tablewrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:1100px){.topbar .nav{gap:14px}.topbar .nav a{font-size:12px}}
+@media(max-width:900px){
+ .wrap{width:calc(100% - 36px)}
+ .topbar{height:72px;position:relative;display:flex;align-items:center;justify-content:space-between}
+ .topbar .brand{font-size:15px;letter-spacing:-.4px;max-width:calc(100% - 160px)}
+ .brand-icon{width:36px;height:36px;flex-shrink:0}.brand small{font-size:7px;letter-spacing:.9px}
+ .topbar .mobile-language{display:inline-flex;flex-shrink:0;margin-left:auto}
+ .topbar .menu{display:inline-grid;flex-shrink:0;place-items:center;border-radius:14px;min-width:44px;height:44px;font-size:22px;background:#f5f7f5;border:1px solid #e7eae7}
+ .topbar .nav{display:none!important;position:absolute;top:calc(100% - 1px);right:0;left:0;z-index:100;background:#fff;border:1px solid #e8eae8;box-shadow:0 18px 36px #10151821;border-radius:0 0 18px 18px;padding:12px;flex-direction:column;align-items:stretch;gap:2px;max-height:calc(100dvh - 80px);overflow-y:auto}
+ .topbar .nav.open{display:flex!important}.topbar .nav a{display:block!important;width:100%;padding:12px 15px;font-size:14px;border-radius:10px}
+ .topbar .nav a[aria-current=page]{background:#e4f6ef;box-shadow:none}.topbar .nav .lang-toggle{display:none}.topbar .nav .year{display:none}
+ .inside-hero{padding:40px 0 28px}.inside-hero h1{font-size:clamp(35px,6.5vw,58px);line-height:1.12;letter-spacing:-2.5px;overflow-wrap:anywhere}
+ .inside-hero p{font-size:15px}.rl{display:block!important;margin-top:0!important;min-width:0}
+ .rl .tabbar{position:sticky!important;top:0;z-index:26;margin:0 -18px 15px;border-bottom:1px solid #e5e8e5;background:#ffffffef;backdrop-filter:blur(14px);border-radius:0!important;padding:0 12px!important}
+ .rl .tabbar .wrap{display:flex!important;flex-direction:row!important;gap:8px!important;overflow-x:auto!important;width:100%;scrollbar-width:thin;padding:10px 0!important}
+ .rl .tabbtn{display:inline-flex!important;white-space:nowrap;width:auto!important;flex:0 0 auto!important;min-height:43px;padding:9px 13px!important;border-radius:24px!important;border:1px solid #e3e6e3!important;font-size:12px!important;justify-content:center}
+ .rl .tabbtn i{min-width:21px;height:21px;font-size:10px}
+ .panels{width:100%;min-width:0}.report-section{padding:35px 0;scroll-margin-top:72px}
+ .factgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.metricgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .status-strip{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .section{padding:66px 0}.hero{padding:64px 0 48px}.hero h1{font-size:clamp(44px,7vw,78px);letter-spacing:-2.7px}
+}
+@media(max-width:560px){
+ .wrap{width:calc(100% - 32px)}.topbar .brand{max-width:calc(100% - 135px);gap:8px}.brand b{font-size:12px}.brand small{font-size:6.8px;line-height:1.3;letter-spacing:.6px}
+ .brand-icon{width:32px;height:32px;border-radius:9px}
+ .topbar .mobile-language{padding:4px!important;gap:3px!important}.topbar .mobile-language button{padding:4px 7px!important;font-size:10px!important}
+ .hero{padding:55px 0 35px}.hero h1{font-size:clamp(41px,10vw,60px);letter-spacing:-2px}.hero p{font-size:15px}
+ .inside-hero h1{font-size:clamp(34px,8.9vw,48px);letter-spacing:-2px}.eyebrow{letter-spacing:1.2px}
+ .choice-grid{grid-template-columns:minmax(0,1fr)}.room-art.photo-cover{height:265px}.room-art.photo-cover strong{font-size:37px}.room-info{padding:17px 18px}
+ .factgrid,.metricgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.fact{padding:13px;min-height:90px}.fact small{font-size:9px}.fact strong{font-size:12px;overflow-wrap:anywhere}.metric{padding:13px}.metric strong{font-size:30px}
+ .status-strip{grid-template-columns:repeat(2,minmax(0,1fr))!important}.docgrid,.two,.gallery,.compliance{grid-template-columns:minmax(0,1fr)}
+ .tabbar .wrap{max-width:100%}.report-section h2{font-size:clamp(26px,7vw,36px);letter-spacing:-1.2px}.section h2{letter-spacing:-1.4px}
+ .cmp,.tablewrap{max-width:100%;overflow-x:auto}.herofig img{aspect-ratio:16/10;object-fit:cover}
+ .nextroom{min-width:0}.footlinks{display:flex;flex-wrap:wrap;gap:12px}.footlinks a{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.room-card:hover .room-art.photo-cover img{transform:none}}
