@@ -1631,10 +1631,10 @@ window.TECC_DATA={
    },
    "links": [
     [
-     "index.html#timeline",
+     "tecc2.html#roomtl",
      {
-      "bm": "Garis masa 2026",
-      "en": "2026 timeline"
+      "bm": "Garis masa TECC 2.0",
+      "en": "TECC 2.0 timeline"
      }
     ],
     [
@@ -2051,7 +2051,7 @@ window.TECC_DATA={
        },
        "mk": 10,
        "st": "partial",
-       "link": "index.html#timeline"
+       "link": "#roomtl"
       },
       {
        "n": {
@@ -2114,7 +2114,7 @@ window.TECC_DATA={
        },
        "mk": 40,
        "st": "partial",
-       "link": "index.html#timeline"
+       "link": "#roomtl"
       },
       {
        "n": {
@@ -2212,7 +2212,7 @@ window.TECC_DATA={
        },
        "mk": 10,
        "st": "partial",
-       "link": "index.html#timeline"
+       "link": "#roomtl"
       },
       {
        "n": {
@@ -2550,6 +2550,414 @@ window.TECC_DATA={
      "en": "MyIPO copyright CRDV2025M07544"
     }
    ]
+  ]
+ },
+ "compare": [
+  {
+   "k": {
+    "bm": "Fokus pembelajaran",
+    "en": "Learning focus"
+   },
+   "a": {
+    "bm": "Kolaboratif: pertuturan, perbincangan, pembentangan",
+    "en": "Collaborative: speaking, discussion, presentation"
+   },
+   "c": {
+    "bm": "Imersif: VR/AR, penghasilan kandungan digital",
+    "en": "Immersive: VR/AR, digital content creation"
+   }
+  },
+  {
+   "k": {
+    "bm": "Peralatan utama",
+    "en": "Key equipment"
+   },
+   "a": {
+    "bm": "Smart TV / papan interaktif, unjuran tanpa wayar, tempat duduk fleksibel",
+    "en": "Smart TV / interactive board, wireless projection, flexible seating"
+   },
+   "c": {
+    "bm": "Set VR, green screen, studio podcast, stesen kerja 3D",
+    "en": "VR sets, green screen, podcast studio, 3D workstations"
+   }
+  },
+  {
+   "k": {
+    "bm": "Pengguna utama",
+    "en": "Main users"
+   },
+   "a": {
+    "bm": "Pengajian Am (DUE), kelas DKA, DKM, DEQ/DEG (jadual Jan 2026)",
+    "en": "General Studies (DUE), DKA, DKM, DEQ/DEG classes (Jan 2026 timetable)"
+   },
+   "c": {
+    "bm": "Tujuh jabatan melalui tempahan (rekod 2026)",
+    "en": "Seven departments via bookings (2026 records)"
+   }
+  },
+  {
+   "k": {
+    "bm": "Cara tempahan",
+    "en": "How it is booked"
+   },
+   "a": {
+    "bm": "PdP berjadual + e-Booking JPA untuk penggunaan tambahan",
+    "en": "Scheduled classes + JPA e-Booking for extra use"
+   },
+   "c": {
+    "bm": "Professional Resource Booking Platform (63 rekod)",
+    "en": "Professional Resource Booking Platform (63 records)"
+   }
+  },
+  {
+   "k": {
+    "bm": "Penarafan bintang",
+    "en": "Star rating"
+   },
+   "a": {
+    "bm": "3 elemen: 50 / 30 / 20",
+    "en": "3 elements: 50 / 30 / 20"
+   },
+   "c": {
+    "bm": "4 elemen: 50 / 20 / 20 / 10 (termasuk Inovasi & Penyelidikan)",
+    "en": "4 elements: 50 / 20 / 20 / 10 (incl. Innovation & Research)"
+   }
+  },
+  {
+   "k": {
+    "bm": "Bukti terkuat sekarang",
+    "en": "Strongest evidence now"
+   },
+   "a": {
+    "bm": "Jadual waktu Jan 2026, taklimat 21 Jan 2026, gambar susun atur MUET",
+    "en": "Jan 2026 timetable, 21 Jan 2026 briefing, MUET layout photo"
+   },
+   "c": {
+    "bm": "Rekod tempahan, ARCHI-SPACE (CORR, kajian, MyIPO, gambar sesi VR)",
+    "en": "Booking records, ARCHI-SPACE (CORR, study, MyIPO, VR session photos)"
+   }
+  },
+  {
+   "k": {
+    "bm": "Paling perlu dilengkapkan",
+    "en": "Most needs completing"
+   },
+   "a": {
+    "bm": "Faktor utiliti, CIDOS, carta organisasi, penyelenggaraan",
+    "en": "Utility factor, CIDOS, organisation chart, maintenance"
+   },
+   "c": {
+    "bm": "Pecahan bulanan tempahan, lokasi & kapasiti, SOP, penyelenggaraan",
+    "en": "Monthly booking split, location & capacity, SOP, maintenance"
+   }
+  }
+ ],
+ "intents": [
+  {
+   "i": "◎",
+   "t": {
+    "bm": "Saya nak lihat laporan penggunaan",
+    "en": "I want to see the usage report"
+   },
+   "d": {
+    "bm": "Jadual, tempahan, aktiviti dan garis masa bagi satu ruang.",
+    "en": "Timetable, bookings, activities and timeline for one room."
+   },
+   "l": [
+    [
+     "tecc2.html#usage",
+     {
+      "bm": "TECC 2.0",
+      "en": "TECC 2.0"
+     }
+    ],
+    [
+     "tecc4.html#usage",
+     {
+      "bm": "TECC 4.0",
+      "en": "TECC 4.0"
+     }
+    ]
+   ]
+  },
+  {
+   "i": "✓",
+   "t": {
+    "bm": "Saya penilai: semak bukti & surat",
+    "en": "I am a reviewer: check evidence & letters"
+   },
+   "d": {
+    "bm": "Daftar semua bukti dengan status sedia, dalaman atau perlu dimuat naik.",
+    "en": "Register of all evidence with ready, internal or to-upload status."
+   },
+   "l": [
+    [
+     "lampiran.html#register",
+     {
+      "bm": "Daftar bukti",
+      "en": "Evidence register"
+     }
+    ],
+    [
+     "lampiran.html#evidenceRows",
+     {
+      "bm": "Bulan × bukti",
+      "en": "Month × evidence"
+     }
+    ]
+   ]
+  },
+  {
+   "i": "⚙",
+   "t": {
+    "bm": "Saya pensyarah: cara guna bilik",
+    "en": "I am a lecturer: how to use the room"
+   },
+   "d": {
+    "bm": "SOP, penyelenggaraan dan panduan peralatan untuk ruang yang awak pilih.",
+    "en": "SOP, maintenance and equipment guidance for your chosen room."
+   },
+   "l": [
+    [
+     "tecc2.html#sop",
+     {
+      "bm": "SOP TECC 2.0",
+      "en": "TECC 2.0 SOP"
+     }
+    ],
+    [
+     "tecc4.html#sop",
+     {
+      "bm": "SOP TECC 4.0",
+      "en": "TECC 4.0 SOP"
+     }
+    ]
+   ]
+  },
+  {
+   "i": "★",
+   "t": {
+    "bm": "Saya pengurusan: status & penarafan",
+    "en": "I am management: status & rating"
+   },
+   "d": {
+    "bm": "Kesediaan bukti mengikut rubrik bintang BIPD bagi setiap ruang.",
+    "en": "Evidence readiness by the BIPD star rubric for each room."
+   },
+   "l": [
+    [
+     "tecc2.html#rubric",
+     {
+      "bm": "Rubrik 2.0",
+      "en": "2.0 rubric"
+     }
+    ],
+    [
+     "tecc4.html#rubric",
+     {
+      "bm": "Rubrik 4.0",
+      "en": "4.0 rubric"
+     }
+    ]
+   ]
+  }
+ ],
+ "chapters": [
+  {
+   "id": "intro",
+   "n": "01",
+   "t": {
+    "bm": "Pengenalan",
+    "en": "Introduction"
+   },
+   "c": "POLYCC 01",
+   "d": {
+    "bm": "Profil ruang, fasiliti dan tujuan.",
+    "en": "Room profile, facilities and purpose."
+   }
+  },
+  {
+   "id": "admin",
+   "n": "02",
+   "t": {
+    "bm": "Pentadbiran",
+    "en": "Administration"
+   },
+   "c": "POLYCC 03",
+   "d": {
+    "bm": "Pengurusan ruang, SOP dan penyelenggaraan.",
+    "en": "Space management, SOP and maintenance."
+   }
+  },
+  {
+   "id": "dash",
+   "n": "03",
+   "t": {
+    "bm": "Dashboard data",
+    "en": "Data dashboard"
+   },
+   "c": "POLYCC 02",
+   "d": {
+    "bm": "Angka dan carta utama pada satu paparan.",
+    "en": "Key figures and charts at a glance."
+   }
+  },
+  {
+   "id": "usage",
+   "n": "04",
+   "t": {
+    "bm": "Penggunaan",
+    "en": "Usage"
+   },
+   "c": "POLYCC 02",
+   "d": {
+    "bm": "Jadual, rekod aktiviti dan garis masa 2026.",
+    "en": "Timetable, activity records and 2026 timeline."
+   }
+  },
+  {
+   "id": "analysis",
+   "n": "05",
+   "t": {
+    "bm": "Analisis",
+    "en": "Analysis"
+   },
+   "c": "★",
+   "d": {
+    "bm": "Dapatan utama dan kesediaan bukti mengikut rubrik bintang.",
+    "en": "Key findings and evidence readiness by star rubric."
+   }
+  },
+  {
+   "id": "highlights",
+   "n": "06",
+   "t": {
+    "bm": "Sorotan & penyebarluasan",
+    "en": "Highlights & dissemination"
+   },
+   "c": "POLYCC 04",
+   "d": {
+    "bm": "Pencapaian, inovasi dan saluran penyebarluasan.",
+    "en": "Achievements, innovation and dissemination channels."
+   }
+  },
+  {
+   "id": "improve",
+   "n": "07",
+   "t": {
+    "bm": "Penambahbaikan",
+    "en": "Improvements"
+   },
+   "c": "",
+   "d": {
+    "bm": "Tindakan untuk melengkapkan laporan dan meningkatkan ruang.",
+    "en": "Actions to complete the report and improve the room."
+   }
+  },
+  {
+   "id": "attach",
+   "n": "08",
+   "t": {
+    "bm": "Lampiran",
+    "en": "Attachments"
+   },
+   "c": "",
+   "d": {
+    "bm": "Surat, dokumen dan bukti sokongan.",
+    "en": "Letters, documents and supporting evidence."
+   }
+  }
+ ],
+ "analysis": {
+  "tecc2": [
+   {
+    "bm": "Jadual Jan 2026 menunjukkan kelas DUE dan DKA/DKM/DEQ/DEG menggunakan bilik. Jam dikira daripada slot imej dan perlu disahkan dengan fail aSc.",
+    "en": "The Jan 2026 timetable shows DUE and DKA/DKM/DEQ/DEG classes using the room. Hours are counted from timetable image slots and need verifying against the aSc file."
+   },
+   {
+    "bm": "Taklimat 21 Jan 2026 mempunyai bukti gambar dan video; tiada rekod e-Booking untuk sesi itu.",
+    "en": "The 21 Jan 2026 briefing has photo and video evidence; there is no e-Booking record for it."
+   },
+   {
+    "bm": "Ko-kurikulum Rabu hanya dikira pada slot yang tidak bertindih dengan kelas (DKA4C bertindih 2.15–4.15 petang).",
+    "en": "Wednesday co-curricular is counted only in slots that do not overlap classes (DKA4C overlaps 2.15–4.15 pm)."
+   },
+   {
+    "bm": "Faktor utiliti 75–80% (dasar BIPD) belum boleh dikira kerana jam penggunaan setahun belum disahkan.",
+    "en": "The 75–80% utility factor (BIPD policy) cannot be computed yet because annual usage hours are not verified."
+   }
+  ],
+  "tecc4": [
+   {
+    "bm": "57 daripada 63 tempahan diluluskan. 5 dibatalkan dan 1 menunggu dikecualikan daripada jam.",
+    "en": "57 of 63 bookings were approved. 5 cancelled and 1 pending are excluded from hours."
+   },
+   {
+    "bm": "Class Room mendominasi (46 tempahan, 107j 19m). VR Set 5 tempahan, Green Screen 4.",
+    "en": "Class Room dominates (46 bookings, 107h 19m). VR Set 5 bookings, Green Screen 4."
+   },
+   {
+    "bm": "Ogos ialah satu-satunya bulan yang sudah dipecahkan (22 tempahan, 49j 14m). 35 tempahan lain menunggu eksport tarikh.",
+    "en": "August is the only month already split out (22 bookings, 49h 14m). The other 35 bookings await a dated export."
+   },
+   {
+    "bm": "Tempahan Class Room dan peralatan serentak tidak boleh digabungkan menjadi satu kadar penggunaan bilik.",
+    "en": "Simultaneous Class Room and equipment bookings cannot be combined into one room utilisation rate."
+   },
+   {
+    "bm": "ARCHI-SPACE menyokong Elemen 4 (inovasi dan penyelidikan) dengan bukti CORR, kajian dan hak cipta.",
+    "en": "ARCHI-SPACE supports Element 4 (innovation and research) with CORR, study and copyright evidence."
+   }
+  ]
+ },
+ "improve": {
+  "tecc2": [
+   {
+    "bm": "Kira faktor utiliti daripada jadual aSc dan e-Booking.",
+    "en": "Compute the utility factor from the aSc timetable and e-Booking."
+   },
+   {
+    "bm": "Lampirkan carta organisasi dan versi SOP semasa.",
+    "en": "Attach the organisation chart and the current SOP version."
+   },
+   {
+    "bm": "Kumpul refleksi pelajar (soal selidik) dan laporan pemerhatian P&P.",
+    "en": "Collect student reflections (survey) and T&L observation reports."
+   },
+   {
+    "bm": "Muat naik bukti CIDOS dan rancangan pengajaran semester.",
+    "en": "Upload CIDOS evidence and semester teaching plans."
+   },
+   {
+    "bm": "Rancang 2–4 aktiviti bukan P&P setiap semester (dasar BIPD).",
+    "en": "Plan 2–4 non-T&L activities each semester (BIPD policy)."
+   }
+  ],
+  "tecc4": [
+   {
+    "bm": "Eksport tempahan tanpa data peribadi untuk pecahan bulanan.",
+    "en": "Export bookings without personal data for the monthly split."
+   },
+   {
+    "bm": "Sahkan lokasi, kapasiti dan pelan susun atur sebenar.",
+    "en": "Confirm location, capacity and the as-built layout plan."
+   },
+   {
+    "bm": "Padankan aktiviti dengan jenis I2: Visualisasi, Penerokaan, Simulasi, Permainan.",
+    "en": "Match activities to I2 types: Visualization, Exploration, Simulation, Game."
+   },
+   {
+    "bm": "Lampirkan SOP VR/green screen dan log penyelenggaraan.",
+    "en": "Attach VR/green screen SOP and maintenance logs."
+   },
+   {
+    "bm": "Sahkan sesi ARCHI-SPACE di TECC 4.0 dan bukti finalis AKRI.",
+    "en": "Confirm ARCHI-SPACE sessions in TECC 4.0 and the AKRI finalist proof."
+   },
+   {
+    "bm": "Isi bilangan peserta bagi setiap aktiviti.",
+    "en": "Fill participant numbers for each activity."
+   }
   ]
  }
 };
