@@ -1,0 +1,54 @@
+/* V8 motion layer: kinetic typography, moving photos, scroll progress. All disabled under prefers-reduced-motion. */
+.m8-progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#6fd3bb,#b39bf5,#fc875d);z-index:90;pointer-events:none}
+
+/* hero + room headings: masked line rise, then a colour sweep */
+.m8 .v7-hero h1>*,.m8 .inside-hero h1>*{display:inline-block;opacity:0;transform:translateY(.6em) skewY(4deg);filter:blur(6px)}
+.m8 .v7-hero h1>br,.m8 .inside-hero h1>br{display:none}
+.m8 .v7-hero h1>*,.m8 .inside-hero h1>*{margin-right:.22em}
+.m8-go .v7-hero h1>*,.m8-go .inside-hero h1>*{animation:m8rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.m8-go .v7-hero h1>*:nth-child(2),.m8-go .inside-hero h1>*:nth-child(2){animation-delay:.14s}
+.m8-go .v7-hero h1>*:nth-child(3),.m8-go .inside-hero h1>*:nth-child(3){animation-delay:.28s}
+.m8-go .v7-hero h1>*:nth-child(4),.m8-go .inside-hero h1>*:nth-child(4){animation-delay:.42s}
+@keyframes m8rise{to{opacity:1;transform:none;filter:none}}
+.m8 .v7-hero h1>*:nth-child(3),.m8 .inside-hero h1>*:nth-child(3){background:linear-gradient(100deg,#19191b 0%,#19191b 38%,#7a5af5 50%,#fc875d 62%,#19191b 74%,#19191b 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:m8rise .9s .3s cubic-bezier(.2,.8,.2,1) forwards,m8sweep 6s 1.4s ease-in-out infinite}
+@keyframes m8sweep{0%{background-position:100% 0}60%,100%{background-position:0 0}}
+.m8 .v7-hero p,.m8 .inside-hero p,.m8 .journey-actions,.m8 .eyebrow{opacity:0;transform:translateY(14px)}
+.m8-go .v7-hero p,.m8-go .inside-hero p,.m8-go .journey-actions,.m8-go .eyebrow{animation:m8fade .8s .55s ease forwards}
+.m8-go .eyebrow{animation-delay:0s}
+@keyframes m8fade{to{opacity:1;transform:none}}
+
+/* section headings: words rise as they enter view */
+.m8w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
+.m8w>i{display:inline-block;font-style:inherit;transform:translateY(105%);transition:transform .75s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--k)*60ms)}
+.m8-in .m8w>i{transform:none}
+.chhead .chnum{display:inline-block;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .8s}
+.m8 .chhead:not(.m8-in) .chnum{transform:translateX(-24px);opacity:0}
+
+/* moving photos */
+.v7-photo.is-active img{animation:m8kb 11s ease-in-out infinite alternate}
+@keyframes m8kb{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.v7-roomportrait,.herofig{overflow:hidden}
+.v7-roomportrait img,.herofig img{will-change:transform;transform:translateY(var(--py,0px)) scale(1.08)}
+.gmas figure{overflow:hidden;opacity:0;transform:translateY(26px) scale(.97);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--k,0)*70ms)}
+.gmas figure.m8-in{opacity:1;transform:none}
+.gmas figure img{transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.gmas figure:hover img{transform:scale(1.08)}
+.m8-tilt{transition:transform .25s ease;transform-style:preserve-3d;will-change:transform}
+
+/* photo ribbon */
+.pstrip{overflow:hidden;margin:18px 0 10px;padding:6px 0 34px;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.pstrip-track{display:flex;gap:14px;width:max-content;animation:m8ribbon 60s linear infinite}
+.pstrip:hover .pstrip-track{animation-play-state:paused}
+.pstrip figure{margin:0;flex:none;width:clamp(180px,24vw,300px);aspect-ratio:4/3;border-radius:20px;overflow:hidden;position:relative;box-shadow:0 14px 30px -18px rgba(40,40,80,.5)}
+.pstrip figure:nth-child(even){transform:translateY(16px)}
+.pstrip img{width:100%;height:100%;object-fit:cover;display:block}
+.pstrip figcaption{position:absolute;left:10px;bottom:10px;background:#fffc;backdrop-filter:blur(6px);padding:4px 10px;border-radius:99px;font-size:11px;font-weight:700;color:#19191b}
+@keyframes m8ribbon{to{transform:translateX(-50%)}}
+
+@media(prefers-reduced-motion:reduce){
+ .m8-progress{display:none}
+ .m8 .v7-hero h1>*,.m8 .inside-hero h1>*,.m8 .v7-hero p,.m8 .inside-hero p,.m8 .journey-actions,.m8 .eyebrow{opacity:1!important;transform:none!important;filter:none!important;animation:none!important}
+ .m8 .v7-hero h1>*:nth-child(3),.m8 .inside-hero h1>*:nth-child(3){animation:none!important;background:none;-webkit-text-fill-color:currentColor}
+ .m8w>i{transform:none;transition:none}.gmas figure{opacity:1;transform:none;transition:none}
+ .v7-photo.is-active img,.pstrip-track{animation:none}.v7-roomportrait img,.herofig img{transform:none}
+ .m8 .chhead:not(.m8-in) .chnum{transform:none;opacity:1}}
