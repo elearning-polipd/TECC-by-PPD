@@ -31,13 +31,25 @@ const G=[
  ['prog','assets/lampiran/susun-atur-ujian-muet-apr2026.webp',{bm:'Susun atur bilik Ujian Lisan MUET, Apr 2026',en:'Room layout for the MUET Speaking Test, Apr 2026'}],
  ['room','assets/gallery/tecc2-sesi-1.webp',{bm:'Sesi taklimat di ruang',en:'Briefing session in the room'}],
  ['room','assets/gallery/tecc2-sesi-2.webp',{bm:'Pembentangan latar belakang TECC 2.0',en:'TECC 2.0 background presentation'}],
+ ['room','assets/gallery/tecc2-bilik-kolaboratif.webp',{bm:'Susun atur bilik untuk kerja berkumpulan',en:'Room layout for group work'}],
+ ['prog','assets/gallery/tecc2-perjumpaan-staf-jun2026.webp',{bm:'Perjumpaan staf JPA di TECC 2.0, Jun 2026',en:'JPA staff gathering in TECC 2.0, Jun 2026'}],
+ ['prog','assets/gallery/tecc2-mesyuarat-jpa-jun2026.webp',{bm:'Warga JPA bersama di TECC 2.0',en:'JPA colleagues together in TECC 2.0'}],
  ['plat','assets/gallery/cidos-polycc.webp',{bm:'Platform CIDOS POLYCC',en:'CIDOS POLYCC platform'}],
  ['plat','assets/gallery/micro-credential-polycc.webp',{bm:'Platform Micro-Credential POLYCC',en:'Micro-Credential POLYCC platform'}]];
+const G4=[
+ ['room','assets/hero/tecc4.webp',{bm:'Studio TECC 4.0 Digital EyeZ',en:'TECC 4.0 Digital EyeZ studio'}],
+ ['room','assets/archi/archi-space-lab-overview.webp',{bm:'Makmal ARCHI-SPACE: pandangan keseluruhan',en:'ARCHI-SPACE lab overview'}],
+ ['room','assets/archi/archi-space-lab-stations.webp',{bm:'Stesen VR dalam makmal',en:'VR stations in the lab'}],
+ ['prog','assets/gallery/tecc4-bengkel-green-screen-rakaman.webp',{bm:'Rakaman Green Screen, Bengkel RMI Future, 2 Jul 2026',en:'Green screen recording, RMI Future workshop, 2 Jul 2026'}],
+ ['prog','assets/gallery/tecc4-bengkel-rmi-future-penyampaian.webp',{bm:'Majlis penutup Bengkel RMI Future',en:'RMI Future workshop closing ceremony'}],
+ ['prog','assets/gallery/tecc4-bengkel-rmi-future-sijil.webp',{bm:'Sijil penghargaan SMK Bandar Baru Sri Sendayan',en:'Certificate of appreciation, SMK Bandar Baru Sri Sendayan'}],
+ ['prog','assets/archi/vr-session-lecturer-guidance.webp',{bm:'Sesi VR: bimbingan pensyarah',en:'VR session: lecturer guidance'}],
+ ['prog','assets/archi/vr-session-multi-station.webp',{bm:'Sesi VR berbilang stesen',en:'Multi-station VR session'}]];
 const CAT={all:{bm:'Semua',en:'All'},room:{bm:'Ruang',en:'Room'},prog:{bm:'Program',en:'Programmes'},plat:{bm:'Platform digital',en:'Digital platforms'}};
 let cat='all';
-function gallery(){const host=$('#gal2');if(!host)return;
- const fl=Object.keys(CAT).map(k=>'<button type="button" data-c="'+k+'" class="'+(k===cat?'on':'')+'" aria-pressed="'+(k===cat)+'">'+esc(L(CAT[k]))+'</button>').join('');
- const items=G.filter(g=>cat==='all'||g[0]===cat).map(g=>'<figure><a href="'+g[1]+'"><img loading="lazy" src="'+g[1]+'" alt="'+esc(L(g[2]))+'"></a><span class="tag">'+esc(L(CAT[g[0]]))+'</span><figcaption>'+esc(L(g[2]))+'</figcaption></figure>').join('');
+function gallery(){const host=$('#gal2')||$('#gal4');if(!host)return;const G_=host.id==='gal4'?G4:G;
+ const fl=Object.keys(CAT).filter(k=>G_.some(g=>k==='all'||g[0]===k)).map(k=>'<button type="button" data-c="'+k+'" class="'+(k===cat?'on':'')+'" aria-pressed="'+(k===cat)+'">'+esc(L(CAT[k]))+'</button>').join('');
+ const items=G_.filter(g=>cat==='all'||g[0]===cat).map(g=>'<figure><a href="'+g[1]+'"><img loading="lazy" src="'+g[1]+'" alt="'+esc(L(g[2]))+'"></a><span class="tag">'+esc(L(CAT[g[0]]))+'</span><figcaption>'+esc(L(g[2]))+'</figcaption></figure>').join('');
  host.innerHTML='<div class="wrap"><h3 class="sub">'+(LG==='en'?'Gallery':'Galeri')+'</h3><div class="gfilter" role="group">'+fl+'</div><div class="gmas">'+items+'</div></div>';
  $$('.gfilter button',host).forEach(b=>b.addEventListener('click',()=>{cat=b.dataset.c;gallery()}))}
 const prev=window.TECC_RENDER;

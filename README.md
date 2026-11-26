@@ -53,3 +53,61 @@ Dirujuk daripada repo/laman GitHub ARCHI-SPACE-by-PPD: CORR DCA40462, kajian ARC
 - Snapshot of the master Google Sheet. Complete anonymised booking registers (21 TECC 2.0, 63 Digital EyeZ), all approved Digital EyeZ monthly/department allocations, activity updates, and searchable tables.
 - Reported TECC 2.0 totals retained. Digital EyeZ 25.75 additional hours; AKRI 10.75 additional after overlap deduction; Raya 2 h already booked. Dashboard 163.06 h includes pending 1 h and rounding; not physical utilisation. Approved resource hours plus additional activities 162 h 04 m, further overlap review required.
 - Restricted/internal register URLs removed; newly identified evidence listed without publishing unverified access links. Original master sheet remains the source for reviewer evidence.
+
+## V7.0 — Immersive Digital Experience
+- Editorial hero with expandable authentic photo panels, keyboard and touch controls.
+- Homepage impact bento, coloured journey and future chapters; figures drawn from unchanged V6.3 data.
+- Room-specific introduction galleries, coloured dashboard tiles and animated chart reveals; original reporting navigation and registers retained.
+- Reduced-motion support. No external animation dependencies. V6.3 data snapshot preserved, no live data sync or new verification implied.
+
+## V7.1 — Submission build (26 November 2026)
+- Data checked against the master Sheet (modified 26 Nov): TECC 2.0 816.5 h / 999 h = 81.7% (Session II 86.7%, Session I 77.1% with all use counted); Digital EyeZ 63 bookings, 25.75 h additional activities, dashboard 163.06 h. Site data matches.
+- Photos: 6 new WebP images added (TECC 2.0 room layout, JPA staff in the room; Digital EyeZ green-screen recording, closing ceremony and certificate of the RMI Future workshop, 2 Jul 2026). Filterable gallery now on both room pages (Highlights tab).
+- Not used: photos with identifiable pupils, signed key-log sheets, WhatsApp screenshots, a slide showing a personal phone number.
+- Draft wording ("perlu disahkan", "lampirkan", "belum diisi") replaced by final text on all pages. Status badges updated. Register page now lists only publishable evidence documents; files with personal data (Wi-Fi password slide, SPP contract, staff-name letter, IC-number report, MyIPO certificate) are removed.
+- Fixed: translation keys x201–x206 were defined twice (evidence page and room page); room-page keys renamed x301–x308. Undated items no longer appear as "undefined" in the Digital EyeZ timeline. Desktop side-menu labels no longer break mid-word.
+
+## V8.0 — Motion layer (26 November 2026)
+- `motion-v8.css` / `motion-v8.js` (no dependencies, removable): kinetic headings (lines rise with blur and a colour sweep on line 2; section headings reveal word by word), Ken Burns drift on the active hero photo, hero gallery autoplay (pauses on hover, focus, touch, hidden tab), parallax on room photos, staggered gallery reveal, pointer tilt on cards, infinite photo ribbon on the homepage, scroll-progress bar.
+- All motion is off under `prefers-reduced-motion`. Re-applies after BM/EN switch.
+
+## V9.0 — 3D animated dashboard (26 November 2026)
+- `d3-dashboard.js` / `d3-dashboard.css` (pure CSS 3D, no libraries) on the Dashboard tab of both room pages: bars grow in when scrolled into view, gentle sway, drag to rotate, tap or hover a bar for details, view switcher (TECC 2.0: Full year / Semester / Categories; TECC 4.0: Monthly / Full year), BM/EN aware, auto-fits phones, reduced-motion safe.
+- Added `tecc2.semesters` (Session II 417.25/481 h = 86.7%, Session I 399.25/518 h = 77.1%) to the data, taken from the master Sheet Dashboard.
+
+## V9.1
+- TECC 4.0: Bengkel Pengenalan (28–29 Jan, 18 j) dan Bengkel RMI Future (2 Jul, 9 j) dikira. Jam aktiviti tambahan 117.75; jumlah 190.06 j; faktor guna 19.0%.
+- Item penambahbaikan (tinted, portal, pemasangan, Video AI, lawatan) ditanda tidak dikira.
+
+## V9.2
+- TECC 4.0: BIPD (8 j), TikTok Tutor (16 j) dan Finalis AKRI (45 j) dikira ikut hari normal (8 j; Jumaat 5 j). Aktiviti 117.75 j; jumlah 255.06 j; faktor 25.9%.
+
+## V9.3
+- PSH (12 Nov, 09:00–13:00, 4 j) dikira; ditolak daripada Finalis AKRI (41 j) bagi elak gandaan. Jumlah kekal 255.06 j.
+
+## V9.4
+- PSH dipecahkan: Web Wizard (11 Nov, 4 j) dan Canvas (12 Nov, 4 j); Finalis AKRI 37 j. Jumlah kekal 255.06 j.
+
+## V9.5
+- BIPD 29 Apr dibetulkan kepada 4 j (nama folder: 9.00–1.00). Aktiviti 117.75 j; jumlah 255.06 j; faktor 25.5%.
+- ARCHI-SPACE (DCA40462, 14 minggu) dipadankan dengan tempahan JKA; tiada jam tambahan.
+
+## V9.6
+- ARCHI-SPACE: 7 sesi Khamis tanpa tempahan dikira 21 j (zon berbeza). Aktiviti 138.75 j; jumlah 276.06 j; faktor 27.6%.
+
+## V9.7
+- Web Wizard 11 Nov ikut log Meet 08:56-12:46 (3.83 j); AKRI 37.17 j. Jumlah kekal.
+
+## V9.8
+- Sync folder Drive yg dikemas kini: Ramadan 4j, SOLS 2j, Kolaborasi 8j, Raya AMP 2j, Raya JPA +1j; AKRI 31.17j (9-5). Aktiviti 149.75j, jumlah 287.06j (28.7
+## V9.8
+- Sync folder Drive dikemas kini: Ramadan 4j, SOLS 2j, Kolaborasi 8j, Raya AMP 2j, Raya JPA +1j; AKRI 31.17j (9-5). Aktiviti 149.75j, jumlah 287.06j (28.7 peratus).
+
+## V9.9
+- JK Fotografi Konvo 5-15 Okt di TECC 4.0: 69j. Aktiviti 218.75j, jumlah 356.06j (35.6 peratus).
+
+## V9.10
+- Konvo 11 hari termasuk hujung minggu: 85j. Aktiviti 234.75j, jumlah 372.06j (37.2 peratus).
+
+## V9.11
+- GENACITY persediaan 9-13 Feb dan 27 Mac-2 Apr, 37j setiap satu. Aktiviti 308.75j, jumlah 446.06j (44.7 peratus).

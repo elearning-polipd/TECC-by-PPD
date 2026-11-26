@@ -9,7 +9,7 @@ const U={inQ:{bm:'MULA DI SINI',en:'START HERE'},cpK:{bm:'BANDINGKAN RUANG',en:'
  cmapK:{bm:'01 — PETA KONSEP',en:'01 — CONCEPT MAP'},cmapH:{bm:'Enam teras laman TECC, empat komponen wajib',en:'Six pillars of the TECC site, four mandatory components'},
  cmapP:{bm:'Struktur ini mengikut Google Sites TECC anda. Pilih komponen wajib untuk melihat teras yang menyokongnya.',en:'This structure follows your TECC Google Site. Pick a mandatory component to see the pillars that support it.'},all:{bm:'Semua',en:'All'},
  tlK:{bm:'GARIS MASA 2026',en:'2026 TIMELINE'},tlH:{bm:'Aktiviti yang dikenal pasti, bulan demi bulan',en:'Identified activities, month by month'},
- tlP:{bm:'Hanya aktiviti yang mempunyai bukti dalam Drive atau rekod tempahan. Butiran peserta masih perlu disahkan.',en:'Only activities with evidence in Drive or booking records. Participant details still need verification.'},
+ tlP:{bm:'Aktiviti yang mempunyai bukti dalam Drive atau rekod tempahan.',en:'Activities with evidence in Drive or booking records.'},
  r2:{bm:'TECC 2.0',en:'TECC 2.0'},r4:{bm:'TECC 4.0',en:'TECC 4.0'},open:{bm:'Buka',en:'Open'},
  zK:{bm:'KAWASAN & CIRI PINTAR',en:'ZONES & SMART FEATURES'},zH:{bm:'Empat zon, satu aliran pembelajaran',en:'Four zones, one learning flow'},
  zP:{bm:'Klik zon untuk melihat fungsinya. Skema konsep sahaja, bukan pelan lantai sebenar. Pelan sebenar akan dilampirkan.',en:'Click a zone to see its role. Conceptual schematic only, not the actual floor plan. The real plan will be attached.'},
@@ -38,7 +38,7 @@ function cmap(){const el=$('#cmap');if(!el)return;
  $$('.chip',el).forEach(b=>b.onclick=()=>{state.comp=b.dataset.comp;cmap();reveal()})}
 function timeline(){const el=$('#timeline')||$('#roomtl');if(!el)return;const fixed=el.dataset.room;const rm=fixed||state.room;
  const rooms=[['all',u('all')],['tecc2',u('r2')],['tecc4',u('r4')]];
- const items=D.activities.filter(a=>rm==='all'||a.room===rm).sort((a,b)=>a.sort<b.sort?-1:1);
+ const items=D.activities.filter(a=>(rm==='all'||a.room===rm)&&/^2026-(0[1-9]|1[0-2])/.test(a.sort||'')).sort((a,b)=>a.sort<b.sort?-1:1);
  el.innerHTML=head('tlK','tlH','tlP')+'<div class="wrap">'+(fixed?'':'<div class="chips" role="group">'+rooms.map(r=>'<button class="chip'+(state.room===r[0]?' on':'')+'" data-room="'+r[0]+'">'+esc(r[1])+'</button>').join('')+'</div>')
  +'<ol class="tl">'+items.map((a,i)=>{const m=+a.sort.slice(5,7);return '<li class="tli rv '+a.room+'" style="--i:'+(i%6)+'"><span class="tlm">'+mon(m)+'</span><div class="tlc"><small>'+esc(L(a.date))+'</small><b>'+esc(L(a.title))+'</b><p>'+esc(L(a.note))+'</p></div></li>'}).join('')+'</ol></div>';
  $$('.chip[data-room]',el).forEach(b=>b.onclick=()=>{state.room=b.dataset.room;timeline();reveal()})}

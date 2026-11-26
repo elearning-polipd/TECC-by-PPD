@@ -53,3 +53,6 @@
 @keyframes icopop{from{opacity:0;transform:scale(.6) rotate(-8deg)}to{opacity:1;transform:none}}
 @media(max-width:800px){.ico-head{width:44px;height:44px;border-radius:14px;padding:5px}.ico-tab{width:20px;height:20px}}
 @media(prefers-reduced-motion:reduce){.ico-head{animation:none}.tabbtn:hover .ico-tab{transform:none}}
+
+/* long tab labels stay whole in the desktop side menu */
+@media(min-width:801px){.rl .tabbtn span{word-break:normal;overflow-wrap:normal;font-size:.86rem;line-height:1.2}.rl .tabbtn{gap:8px;padding-left:12px!important;padding-right:8px!important}.rl .tabbtn .ico-tab{margin-right:0}}
