@@ -13,13 +13,13 @@ function hrs(s){const m=/(\d+)j(?:\s*(\d+)m)?/.exec(s||'');return m?+m[1]+(m[2]?
 function views(D,room){
  if(room==='tecc2'){
   const S=D.tecc2.summary,sem=D.tecc2.semesters||[];
-  const cat=S.rows.map((r,i)=>({v:r.h,c:[LIL,YEL,BLU,MINT,LIM,ORG][i],l:T(...[['PdP berjadual','Ko-kurikulum','Program & institusi','Tempahan','Tanpa tempahan','Kemas Jumaat'][i],['Scheduled classes','Co-curricular','Programmes','Bookings','Unbooked use','Friday tidy'][i]]),d:(EN()?r.k.en:r.k.bm)}));
+  const cat=S.rows.map((r,i)=>({v:r.h,c:[LIL,YEL,BLU,MINT,LIM,ORG][i],l:T(...[['PdP berjadual','Ko-kurikulum','Program & institusi','Tempahan','Tanpa tempahan','Pengemasan Jumaat'][i],['Scheduled classes','Co-curricular','Programmes','Bookings','Unbooked use','Friday tidy'][i]]),d:(EN()?r.k.en:r.k.bm)}));
   return [
    {id:'year',name:T('Setahun','Full year'),max:S.capacity,bars:[
      {v:S.capacity,c:'#fff',t:'glass',l:T('Kapasiti','Capacity'),d:T('Kapasiti setahun: 37 j seminggu × 27 minggu kuliah','Annual capacity: 37 h a week × 27 teaching weeks')},
-     {v:S.total,c:MINT,l:T('Digunakan','Used'),d:T('Jumlah jam penggunaan, faktor guna '+S.factor+'%','Total usage hours, utility factor '+S.factor+'%')},
+     {v:S.total,c:MINT,l:T('Digunakan','Used'),d:T('Jumlah jam penggunaan, faktor penggunaan '+S.factor+'%','Total usage hours, utility factor '+S.factor+'%')},
      {v:S.capacity*.75,c:ORG,l:T('Sasaran 75%','75% target'),d:T('Sasaran Garis Panduan TECC 2.0 (75–80%)','TECC 2.0 Guideline target (75–80%)')}],
-    sum:S.factor+'%',sumsub:T('Faktor guna setahun','Annual utility factor')},
+    sum:S.factor+'%',sumsub:T('Faktor penggunaan setahun','Annual utility factor')},
    {id:'sem',name:T('Semester','Semester'),max:Math.max(...sem.map(s=>s.cap)),bars:sem.flatMap((s,i)=>[
      {v:s.cap,c:'#fff',t:'glass',l:T('Kapasiti','Capacity'),g:s.k[EN()?'en':'bm'],gi:i,d:s.k[EN()?'en':'bm']+' · '+T('kapasiti','capacity')},
      {v:s.used,c:i?LIL:MINT,l:T('Digunakan','Used'),d:s.k[EN()?'en':'bm']+' · '+s.f+'% '+T('daripada kapasiti','of capacity')}]),
@@ -28,13 +28,13 @@ function views(D,room){
  }
  const T4=D.tecc4,mo=['Jan','Feb',T('Mac','Mar'),'Apr',T('Mei','May'),'Jun','Jul',T('Ogo','Aug'),'Sep',T('Okt','Oct'),'Nov',T('Dis','Dec')];
  const mon=T4.monthly.filter(m=>m.m<=11).map(m=>({v:hrs(m.hours),c:m.state==='known'?(m.m===8?ORG:MINT):'#cfd3da',l:mo[m.m-1],d:m.state==='known'?(T('Tempahan diluluskan: ','Approved bookings: ')+m.bookings+' · '+m.hours):T('Tiada tempahan diluluskan','No approved bookings')}));
- const tot=446.06;
+ const tot=612.06;
  return [
   {id:'mon',name:T('Bulanan','Monthly'),max:Math.max(...mon.map(x=>x.v)),bars:mon,sum:fmt(mon.reduce((a,b)=>a+b.v,0))+' '+U(),sumsub:T('Jam tempahan diluluskan, Jan–Nov','Approved booking hours, Jan–Nov'),small:true},
   {id:'year',name:T('Setahun','Full year'),max:999,bars:[
    {v:999,c:'#fff',t:'glass',l:T('Kapasiti','Capacity'),d:T('Kapasiti setahun','Annual capacity')},
    {v:tot,c:MINT,l:T('Digunakan','Used'),d:T('Jam penggunaan direkod, dashboard induk','Recorded usage hours, master dashboard')},
-   {v:749.25,c:ORG,l:T('Sasaran 75%','75% target'),d:T('Rujukan sasaran kapasiti 75%','75% capacity reference')}],sum:'44.7%',sumsub:T('Faktor guna setahun','Annual utility factor')}];
+   {v:749.25,c:ORG,l:T('Sasaran 75%','75% target'),d:T('Rujukan sasaran kapasiti 75%','75% capacity reference')}],sum:'61.3%',sumsub:T('Faktor penggunaan setahun','Annual utility factor')}];
 }
 function build(host,room){
  const D=window.TECC_DATA;if(!D)return;

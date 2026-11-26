@@ -111,3 +111,16 @@ Dirujuk daripada repo/laman GitHub ARCHI-SPACE-by-PPD: CORR DCA40462, kajian ARC
 
 ## V9.11
 - GENACITY persediaan 9-13 Feb dan 27 Mac-2 Apr, 37j setiap satu. Aktiviti 308.75j, jumlah 446.06j (44.7 peratus).
+
+## V9.12
+- Seksyen baharu #equip (tecc4): pelan susun atur 13.30x7.10 m (2 gambar WebP), 3 zon Garis Panduan, spesifikasi 13 item peralatan, pautan dokumen. Status komponen 3 TECC 4.0 jadi Sedia.
+
+## V9.13
+- arkib2025: seksyen #embeds, pratonton iframe Canva 2024 + Google Sites 2025 (muat atas ketik, butang buka tab baharu, amaran jika disekat).
+
+## V9.14
+- TECC 2.0 jadual: kod warna mengikut program (DKA, DKM, DEQ, DEG, DSB dsb) + legenda.
+- TECC 4.0: seksyen #t4week (slot Pengemasan Jumaat 3-5 petang, 47 Jumaat x 2 j = 94 j; 1 Mei dan 25 Dis cuti umum tidak dikira) + aktiviti c20. Jumlah 540.06 j (54.1 peratus).
+- TECC 4.0: galeri aktiviti #t4gallery, kolaj 3 slot, pautan folder Drive; foto tambahan: assets/activity/ID-2.webp.
+- Semakan bahasa: BM baku (papan pemuka, pengemasan, faktor penggunaan, jarak piksel, anda).
+V9.15: asas pembangunan 2025 (Kick Off 3 j, pemasangan 45 j, Simlab 16 j, latihan peralatan 8 j = 72 j; jumlah 612.06 j, 61.3%); bahagian KPI/SKT; foto ganti tanpa 404; favicon/og meta; alt ikon; sasaran sentuh 44px.
