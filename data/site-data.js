@@ -1,9 +1,9 @@
-/* SOURCE-DRIVEN, EDITABLE DATA POOL. Curated reporting view, NOT a live booking connection.
-   Edit this file only; every page reads from it. Never add personal names, emails or booking IDs. */
+/* Curated reporting snapshot, no personal booking identifiers. */
 window.TECC_DATA={
  "meta": {
-  "generated": "2026-11-23",
-  "note": "Pool data sumber-berpandu. Bukan sambungan langsung ke sistem tempahan. Kemas kini fail ini sahaja; semua halaman membaca daripadanya. Jangan masukkan nama, e-mel, no. telefon atau ID tempahan."
+  "generated": "2026-11-26",
+  "note": "Pool data sumber-berpandu. Bukan sambungan langsung ke sistem tempahan. Kemas kini fail ini sahaja; semua halaman membaca daripadanya. Jangan masukkan nama, e-mel, no. telefon atau ID tempahan.",
+  "source": "TECC 2026 Penggunaan Ruang — snapshot 2026-11-26"
  },
  "ui": {
   "ready": {
@@ -119,12 +119,24 @@ window.TECC_DATA={
    "en": "Parent folder (unassigned)"
   },
   "total16": {
-   "bm": "Jumlah tempahan diluluskan: 16 jam (4 + 12). Aktiviti belum disahkan tidak dijumlahkan.",
-   "en": "Approved booked hours: 16 h (4 + 12). Unverified activities are not added."
+   "bm": "Jumlah dilaporkan: 816.5 / 999 jam = 81.7%. Termasuk 45 jam penyelenggaraan dan tempahan; semakan pertindihan masih diperlukan.",
+   "en": "Reported total: 816.5 / 999 h = 81.7%. Includes 45 h maintenance and bookings; overlap review remains."
   },
   "other_dept": {
    "bm": "Jabatan lain",
    "en": "Other departments"
+  },
+  "done": {
+   "bm": "Dilaksanakan",
+   "en": "Held"
+  },
+  "hrscol": {
+   "bm": "Jam",
+   "en": "Hours"
+  },
+  "cancelled": {
+   "bm": "Dibatalkan",
+   "en": "Cancelled"
   }
  },
  "status": {
@@ -148,8 +160,8 @@ window.TECC_DATA={
     "en": "Start year unconfirmed"
    },
    "c2": {
-    "bm": "16 jam tempahan; bilangan peserta belum disahkan",
-    "en": "16 booked hours; participants unconfirmed"
+    "bm": "816.5 jam dilaporkan · semakan pertindihan belum selesai",
+    "en": "816.5 reported hours · overlap review pending"
    },
    "c3": {
     "bm": "Versi SOP dan nama pegawai belum disahkan",
@@ -166,8 +178,8 @@ window.TECC_DATA={
     "en": "Location and capacity unconfirmed"
    },
    "c2": {
-    "bm": "63 tempahan; peserta dan bulan belum lengkap",
-    "en": "63 bookings; participants and months incomplete"
+    "bm": "63 tempahan · pecahan lengkap · jam fizikal belum disahkan",
+    "en": "63 bookings · full breakdown · physical hours unverified"
    },
    "c3": {
     "bm": "Panduan ada; pegawai dan penyelenggaraan belum disahkan",
@@ -224,6 +236,31 @@ window.TECC_DATA={
     "name": "JPA",
     "bookings": 15,
     "hours": "39j 49m"
+   },
+   {
+    "name": "JKA",
+    "bookings": 8,
+    "hours": "20j"
+   },
+   {
+    "name": "JKM",
+    "bookings": 2,
+    "hours": "7j"
+   },
+   {
+    "name": "JP",
+    "bookings": 2,
+    "hours": "5j"
+   },
+   {
+    "name": "JKE",
+    "bookings": 1,
+    "hours": "5j"
+   },
+   {
+    "name": "JHEP",
+    "bookings": 1,
+    "hours": "2j"
    }
   ],
   "deptAll": [
@@ -242,15 +279,21 @@ window.TECC_DATA={
    },
    {
     "m": 2,
-    "state": "pending"
+    "state": "known",
+    "bookings": 1,
+    "hours": "2j"
    },
    {
     "m": 3,
-    "state": "pending"
+    "state": "known",
+    "bookings": 5,
+    "hours": "11j"
    },
    {
     "m": 4,
-    "state": "pending"
+    "state": "known",
+    "bookings": 8,
+    "hours": "20j 45m"
    },
    {
     "m": 5,
@@ -262,29 +305,27 @@ window.TECC_DATA={
    },
    {
     "m": 7,
-    "state": "pending",
-    "note": {
-     "bm": "sekurang-kurangnya 1 tempahan (29 Jul)",
-     "en": "at least 1 booking (29 Jul)"
-    }
+    "state": "known",
+    "bookings": 5,
+    "hours": "16j 15m"
    },
    {
     "m": 8,
     "state": "known",
     "bookings": 22,
-    "hours": "49j 14m",
-    "note": {
-     "bm": "bulan tertinggi",
-     "en": "highest month"
-    }
+    "hours": "49j 14m"
    },
    {
     "m": 9,
-    "state": "pending"
+    "state": "known",
+    "bookings": 11,
+    "hours": "22j 15m"
    },
    {
     "m": 10,
-    "state": "pending"
+    "state": "known",
+    "bookings": 5,
+    "hours": "14j 50m"
    },
    {
     "m": 11,
@@ -296,178 +337,992 @@ window.TECC_DATA={
    }
   ],
   "residual": {
-   "bookings": 35,
-   "hours": "87j 05m",
+   "bookings": 0,
+   "hours": "0j",
    "months": {
-    "bm": "Feb, Mac, Apr, Jul, Sep, Okt",
-    "en": "Feb, Mar, Apr, Jul, Sep, Oct"
+    "bm": "Tiada",
+    "en": "None"
    }
   },
   "profile": {
    "commissioned": "30/09/2025",
    "size": "13.30 m × 7.10 m"
-  }
+  },
+  "activityHours": 25.75,
+  "dashboardHours": 163.06,
+  "dashboardFactor": 16.3,
+  "confirmedBookingHours": 2,
+  "bookingRows": [
+   [
+    "2026-02-26",
+    "14:00",
+    "16:00",
+    "JKA",
+    "VR Set",
+    "booked"
+   ],
+   [
+    "2026-03-04",
+    "14:00",
+    "16:30",
+    "JKA",
+    "Green Screen",
+    "booked"
+   ],
+   [
+    "2026-03-05",
+    "14:00",
+    "16:30",
+    "JKA",
+    "Green Screen",
+    "booked"
+   ],
+   [
+    "2026-03-06",
+    "14:30",
+    "16:00",
+    "JKA",
+    "Green Screen",
+    "booked"
+   ],
+   [
+    "2026-03-10",
+    "09:00",
+    "11:00",
+    "JPA",
+    "Class Room",
+    "cancelled"
+   ],
+   [
+    "2026-03-12",
+    "14:00",
+    "16:30",
+    "JKA",
+    "VR Set",
+    "booked"
+   ],
+   [
+    "2026-03-12",
+    "14:00",
+    "16:30",
+    "JKE",
+    "VR Set",
+    "cancelled"
+   ],
+   [
+    "2026-03-13",
+    "15:00",
+    "16:00",
+    "JSKK",
+    "Podcast Studio",
+    "pending"
+   ],
+   [
+    "2026-03-16",
+    "11:00",
+    "13:00",
+    "JPA",
+    "Green Screen",
+    "done"
+   ],
+   [
+    "2026-04-09",
+    "14:00",
+    "17:00",
+    "JKA",
+    "VR Set",
+    "booked"
+   ],
+   [
+    "2026-04-13",
+    "08:15",
+    "10:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-04-14",
+    "10:15",
+    "13:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-04-16",
+    "13:00",
+    "15:00",
+    "JHEP",
+    "Other",
+    "booked"
+   ],
+   [
+    "2026-04-16",
+    "14:00",
+    "17:00",
+    "JP",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-04-20",
+    "10:00",
+    "12:00",
+    "JP",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-04-23",
+    "14:00",
+    "17:00",
+    "JKA",
+    "VR Set",
+    "booked"
+   ],
+   [
+    "2026-04-28",
+    "14:00",
+    "17:00",
+    "JKA",
+    "VR Set",
+    "booked"
+   ],
+   [
+    "2026-07-16",
+    "08:00",
+    "10:00",
+    "JKM",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-07-22",
+    "08:00",
+    "13:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-07-29",
+    "08:00",
+    "10:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-07-29",
+    "08:00",
+    "13:00",
+    "JKM",
+    "Other",
+    "booked"
+   ],
+   [
+    "2026-07-30",
+    "08:00",
+    "10:00",
+    "JMSK",
+    "Class Room",
+    "cancelled"
+   ],
+   [
+    "2026-07-30",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-07-31",
+    "08:00",
+    "10:00",
+    "JMSK",
+    "Class Room",
+    "cancelled"
+   ],
+   [
+    "2026-08-03",
+    "08:00",
+    "10:00",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-03",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-04",
+    "08:00",
+    "10:00",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-05",
+    "08:00",
+    "10:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-06",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-07",
+    "08:00",
+    "11:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-10",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-12",
+    "08:00",
+    "13:00",
+    "JKE",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-13",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-14",
+    "08:00",
+    "10:00",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-14",
+    "10:16",
+    "12:15",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-17",
+    "08:00",
+    "10:00",
+    "JMSK",
+    "Class Room",
+    "cancelled"
+   ],
+   [
+    "2026-08-17",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-17",
+    "14:00",
+    "16:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-19",
+    "08:00",
+    "10:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-20",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-21",
+    "08:00",
+    "10:00",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-24",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-24",
+    "14:00",
+    "16:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-26",
+    "08:00",
+    "10:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-27",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-28",
+    "08:00",
+    "10:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-08-28",
+    "10:00",
+    "12:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-18",
+    "09:00",
+    "11:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-21",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-22",
+    "08:30",
+    "10:15",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-23",
+    "08:00",
+    "10:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-23",
+    "14:30",
+    "17:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-24",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-25",
+    "08:00",
+    "10:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-28",
+    "08:00",
+    "10:00",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-28",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-28",
+    "15:00",
+    "16:30",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-09-30",
+    "08:00",
+    "10:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-10-01",
+    "10:15",
+    "12:15",
+    "JMSK",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-10-02",
+    "08:40",
+    "11:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-10-06",
+    "08:00",
+    "11:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-10-07",
+    "08:00",
+    "13:00",
+    "JPA",
+    "Class Room",
+    "booked"
+   ],
+   [
+    "2026-10-09",
+    "08:00",
+    "10:30",
+    "JPA",
+    "Class Room",
+    "booked"
+   ]
+  ]
  },
  "tecc2": {
   "monthly": [
    {
     "m": 1,
     "pdp": {
-     "bm": "Sesi II 2025/2026 berkuat kuasa 12 Jan · ≈24 j/minggu (kiraan slot, perlu pengesahan)",
-     "en": "Session II 2025/2026 effective 12 Jan · ≈24 h/week (slot count, to verify)"
+     "bm": "Sesi II 2025/2026 · 25 j/minggu",
+     "en": "Session II 2025/2026 · 25 h/week"
     },
     "acts": [
-     "a1"
-    ]
+     "a1",
+     "a1b"
+    ],
+    "extra": 8
    },
    {
     "m": 2,
     "pdp": {
-     "bm": "Sesi II · tempoh sebenar perlu disahkan",
-     "en": "Session II · actual period to verify"
+     "bm": "Sesi II 2025/2026 · 25 j/minggu",
+     "en": "Session II 2025/2026 · 25 h/week"
     },
     "acts": []
    },
    {
     "m": 3,
     "pdp": {
-     "bm": "Sesi II · tempoh sebenar perlu disahkan",
-     "en": "Session II · actual period to verify"
+     "bm": "Sesi II 2025/2026 · 25 j/minggu",
+     "en": "Session II 2025/2026 · 25 h/week"
     },
-    "acts": []
+    "acts": [
+     "a1c"
+    ],
+    "extra": 3
    },
    {
     "m": 4,
     "pdp": {
-     "bm": "Sesi II · tempoh sebenar perlu disahkan",
-     "en": "Session II · actual period to verify"
+     "bm": "Sesi II 2025/2026 · 25 j/minggu",
+     "en": "Session II 2025/2026 · 25 h/week"
     },
     "acts": [
      "a2"
-    ]
+    ],
+    "extra": 27
    },
    {
     "m": 5,
     "pdp": {
-     "bm": "Sesi II · tempoh sebenar perlu disahkan",
-     "en": "Session II · actual period to verify"
+     "bm": "Sesi II 2025/2026 · 25 j/minggu",
+     "en": "Session II 2025/2026 · 25 h/week"
     },
     "acts": []
    },
    {
     "m": 6,
     "pdp": {
-     "bm": "Sesi II · tempoh sebenar perlu disahkan",
-     "en": "Session II · actual period to verify"
+     "bm": "Sesi II 2025/2026 · 25 j/minggu",
+     "en": "Session II 2025/2026 · 25 h/week"
     },
     "acts": [
-     "a3"
+     "a3",
+     "a3b",
+     "a9"
     ],
-    "extra": 4
+    "extra": 10.25
    },
    {
     "m": 7,
     "pdp": {
-     "bm": "Jadual sesi berikutnya belum diterima",
-     "en": "Next session timetable not yet received"
+     "bm": "Sesi I 2026/2027 · 22 j/minggu",
+     "en": "Session I 2026/2027 · 22 h/week"
     },
-    "acts": []
+    "acts": [
+     "a5"
+    ],
+    "extra": 15.25
    },
    {
     "m": 8,
     "pdp": {
-     "bm": "Jadual sesi berikutnya belum diterima",
-     "en": "Next session timetable not yet received"
+     "bm": "Sesi I 2026/2027 · 22 j/minggu",
+     "en": "Session I 2026/2027 · 22 h/week"
     },
-    "acts": []
+    "acts": [
+     "a5"
+    ],
+    "extra": 5
    },
    {
     "m": 9,
     "pdp": {
-     "bm": "Jadual sesi berikutnya belum diterima",
-     "en": "Next session timetable not yet received"
+     "bm": "Sesi I 2026/2027 · 22 j/minggu",
+     "en": "Session I 2026/2027 · 22 h/week"
     },
     "acts": [
-     "a4"
+     "a4",
+     "a5"
     ],
-    "extra": 12
+    "extra": 23
    },
    {
     "m": 10,
     "pdp": {
-     "bm": "Jadual sesi berikutnya belum diterima",
-     "en": "Next session timetable not yet received"
+     "bm": "Sesi I 2026/2027 · 22 j/minggu",
+     "en": "Session I 2026/2027 · 22 h/week"
     },
-    "acts": []
+    "acts": [
+     "a5"
+    ],
+    "extra": 3
    },
    {
     "m": 11,
     "pdp": {
-     "bm": "Jadual sesi berikutnya belum diterima",
-     "en": "Next session timetable not yet received"
+     "bm": "Sesi I 2026/2027 · 22 j/minggu",
+     "en": "Session I 2026/2027 · 22 h/week"
     },
-    "acts": []
+    "acts": [
+     "a6"
+    ],
+    "extra": 2
    },
    {
     "m": 12,
     "pdp": {
-     "bm": "Jadual sesi berikutnya belum diterima",
-     "en": "Next session timetable not yet received"
+     "bm": "Sesi I 2026/2027 · 22 j/minggu",
+     "en": "Session I 2026/2027 · 22 h/week"
     },
     "acts": []
    }
   ],
-  "bookedHours": 16
+  "bookedHours": 48,
+  "summary": {
+   "total": 816.5,
+   "capacity": 999,
+   "factor": 81.7,
+   "target": "75–80%",
+   "perWeek": 37,
+   "weeks": 27,
+   "rows": [
+    {
+     "k": {
+      "bm": "PdP berjadual (Sesi II 25 j × 13 minggu + Sesi I 22 j × 14 minggu)",
+      "en": "Scheduled classes (Session II 25 h × 13 wks + Session I 22 h × 14 wks)"
+     },
+     "h": 633
+    },
+    {
+     "k": {
+      "bm": "Ko-kurikulum Rabu (English Club) · 3 j × 14 minggu Sesi I",
+      "en": "Wednesday co-curricular (English Club) · 3 h × 14 weeks, Session I"
+     },
+     "h": 42
+    },
+    {
+     "k": {
+      "bm": "Program dan aktiviti institusi (kursus, mesyuarat, Ujian Lisan MUET, lawatan)",
+      "en": "Programmes and institutional activities (course, meetings, MUET speaking test, visit)"
+     },
+     "h": 42.25
+    },
+    {
+     "k": {
+      "bm": "Tempahan diluluskan (e-Booking 16 j + tempahan terus dalam log kunci 32 j)",
+      "en": "Approved bookings (e-Booking 16 h + direct bookings in the key log 32 h)"
+     },
+     "h": 48
+    },
+    {
+     "k": {
+      "bm": "Penggunaan tanpa tempahan (rekod log kunci)",
+      "en": "Unbooked use (key-log records)"
+     },
+     "h": 6.25
+    },
+    {
+     "k": {
+      "bm": "Penyelenggaraan dan kemas bilik mingguan (Jumaat 3.00–5.00 petang)",
+      "en": "Weekly maintenance and room tidying (Friday 3.00–5.00 pm)"
+     },
+     "h": 45
+    }
+   ]
+  },
+  "bookingRows": [
+   [
+    "2026-03-07",
+    "14:00",
+    "17:00",
+    "-",
+    3.0,
+    "done"
+   ],
+   [
+    "2026-06-24",
+    "09:00",
+    "12:00",
+    "UBI",
+    4.0,
+    "done"
+   ],
+   [
+    "2026-07-03",
+    "08:00",
+    "10:00",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-07-14",
+    "10:15",
+    "12:15",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-07-16",
+    "11:15",
+    "13:15",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-07-24",
+    "08:00",
+    "10:00",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-07-29",
+    "14:00",
+    "17:00",
+    "-",
+    3.0,
+    "done"
+   ],
+   [
+    "2026-07-30",
+    "11:15",
+    "13:15",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-08-07",
+    "15:00",
+    "16:00",
+    "-",
+    1.0,
+    "done"
+   ],
+   [
+    "2026-08-14",
+    "08:00",
+    "10:00",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-08-21",
+    "09:00",
+    "10:00",
+    "-",
+    1.0,
+    "done"
+   ],
+   [
+    "2026-09-09",
+    "13:15",
+    "14:15",
+    "-",
+    1.0,
+    "done"
+   ],
+   [
+    "2026-09-11",
+    "13:15",
+    "17:15",
+    "JPA/UBI",
+    4.0,
+    "booked"
+   ],
+   [
+    "2026-09-12",
+    "10:15",
+    "14:15",
+    "JPA/UBI",
+    4.0,
+    "booked"
+   ],
+   [
+    "2026-09-13",
+    "10:15",
+    "14:15",
+    "JPA/UBI",
+    4.0,
+    "booked"
+   ],
+   [
+    "2026-09-18",
+    "08:00",
+    "10:00",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-09-18",
+    "15:00",
+    "17:00",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-09-22",
+    "10:15",
+    "12:15",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-09-30",
+    "16:00",
+    "18:00",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-10-02",
+    "08:00",
+    "10:00",
+    "-",
+    2.0,
+    "done"
+   ],
+   [
+    "2026-10-09",
+    "09:00",
+    "10:00",
+    "-",
+    1.0,
+    "done"
+   ]
+  ]
  },
  "activities": [
   {
    "id": "a1",
-   "room": "tecc2",
    "sort": "2026-01-21",
    "date": {
     "bm": "21 Jan 2026",
     "en": "21 Jan 2026"
    },
    "title": {
-    "bm": "Kursus TECC Smart Teaching (taklimat TECC 2.0)",
-    "en": "TECC Smart Teaching course (TECC 2.0 briefing)"
+    "bm": "Kursus TECC Smart Teaching, Hari 1 (TECC 2.0)",
+    "en": "TECC Smart Teaching course, Day 1 (TECC 2.0)"
    },
+   "h": 6,
    "note": {
-    "bm": "Berdasarkan kapsyen video dan folder Briefing TECC 2.0. Sebahagian sesi menggunakan kemudahan VR dan green screen (TECC 4.0). Tiada rekod e-Booking.",
-    "en": "From video caption and the Briefing TECC 2.0 folder. Part of the session used VR and green-screen facilities (TECC 4.0). No e-Booking record."
+    "bm": "9.30 pagi–4.30 petang. Taklimat TECC 2.0 dan sesi amali.",
+    "en": "9.30 am–4.30 pm. TECC 2.0 briefing and hands-on session."
    },
-   "status": "photo",
+   "status": "done",
    "evidence": [
     "l_brief",
     "l_ph1",
     "l_ph2",
     "l_vid"
-   ]
+   ],
+   "room": "tecc2"
+  },
+  {
+   "id": "a1b",
+   "sort": "2026-01-27",
+   "date": {
+    "bm": "27 Jan 2026",
+    "en": "27 Jan 2026"
+   },
+   "title": {
+    "bm": "Lawatan delegasi Darul Quran ke TECC",
+    "en": "Darul Quran delegation visit to TECC"
+   },
+   "h": 2,
+   "note": {
+    "bm": "4.30–6.30 petang.",
+    "en": "4.30–6.30 pm."
+   },
+   "status": "done",
+   "evidence": [],
+   "room": "tecc2"
+  },
+  {
+   "id": "a1c",
+   "sort": "2026-03-07",
+   "date": {
+    "bm": "7 Mac 2026",
+    "en": "7 Mar 2026"
+   },
+   "title": {
+    "bm": "Penggunaan ditempah (catatan log kunci)",
+    "en": "Booked use (key-log entry)"
+   },
+   "h": 3,
+   "note": {
+    "bm": "2.00–5.00 petang.",
+    "en": "2.00–5.00 pm."
+   },
+   "status": "booked",
+   "evidence": [],
+   "room": "tecc2"
   },
   {
    "id": "a2",
-   "room": "tecc2",
    "sort": "2026-04-13",
    "date": {
-    "bm": "~13 Apr 2026",
-    "en": "~13 Apr 2026"
+    "bm": "13–22 Apr 2026",
+    "en": "13–22 Apr 2026"
    },
    "title": {
-    "bm": "Ujian bertutur MUET (bilik disediakan untuk calon)",
-    "en": "MUET speaking test (room set up for candidates)"
+    "bm": "Ujian Lisan MUET Sesi 1/2026 (bilik kuarantin calon)",
+    "en": "MUET Speaking Test Session 1/2026 (candidate quarantine room)"
    },
+   "h": 27,
    "note": {
-    "bm": "Tarikh diambil daripada nama fail; aktiviti disimpulkan daripada papan tanda bilik. Sila sahkan tarikh sebenar.",
-    "en": "Date taken from file name; activity inferred from room signage. Please confirm the actual date."
+    "bm": "Persediaan bilik 13 Apr dan ujian 14, 15, 16, 20, 21, 22 Apr. Bilik dikhaskan sepanjang tempoh; jam kelas jadual yang tidak berlangsung di TECC telah ditolak (bersih).",
+    "en": "Room set-up on 13 Apr and tests on 14, 15, 16, 20, 21, 22 Apr. Room reserved throughout; timetabled class hours not held in TECC are deducted (net)."
    },
-   "status": "photo",
+   "status": "done",
    "evidence": [
     "l_muet"
-   ]
+   ],
+   "room": "tecc2"
   },
   {
    "id": "a3",
-   "room": "tecc2",
+   "sort": "2026-06-23",
+   "date": {
+    "bm": "23 Jun 2026",
+    "en": "23 Jun 2026"
+   },
+   "title": {
+    "bm": "Mesyuarat Jabatan Pengajian Am Bil. 2/2026",
+    "en": "General Studies Department Meeting No. 2/2026"
+   },
+   "h": 5.25,
+   "note": {
+    "bm": "Sehari penuh, bersambung pagi dan petang.",
+    "en": "Full day, morning and afternoon sessions."
+   },
+   "status": "done",
+   "evidence": [],
+   "room": "tecc2"
+  },
+  {
+   "id": "a3b",
    "sort": "2026-06-24",
    "date": {
     "bm": "24 Jun 2026",
@@ -475,20 +1330,41 @@ window.TECC_DATA={
    },
    "title": {
     "bm": "Mesyuarat UBI",
-    "en": "UBI meeting"
+    "en": "English Language Unit meeting"
    },
+   "h": 4,
    "note": {
-    "bm": "4 jam tempahan diluluskan · semak pelaksanaan",
-    "en": "4 approved booked hours · verify it took place"
+    "bm": "09:00–12:00 mengikut folder; 4 jam tempahan asal kekal sementara, beza 1 jam perlu disahkan.",
+    "en": "09:00–12:00 per folder; original 4 h booking retained pending reconciliation of 1 h difference."
    },
    "status": "booked",
    "evidence": [
     "l_ebook"
-   ]
+   ],
+   "room": "tecc2"
+  },
+  {
+   "id": "a5",
+   "sort": "2026-07-03",
+   "date": {
+    "bm": "Jul–Okt 2026",
+    "en": "Jul–Oct 2026"
+   },
+   "title": {
+    "bm": "Tempahan terus dan penggunaan tanpa tempahan oleh pensyarah (log kunci)",
+    "en": "Direct bookings and unbooked lecturer use (key log)"
+   },
+   "h": 35.25,
+   "note": {
+    "bm": "16 tempahan terus (29 j) dan 5 penggunaan tanpa tempahan (6.25 j); Jul–Okt.",
+    "en": "16 direct bookings (29 h) and 5 unbooked uses (6.25 h); Jul–Oct."
+   },
+   "status": "done",
+   "evidence": [],
+   "room": "tecc2"
   },
   {
    "id": "a4",
-   "room": "tecc2",
    "sort": "2026-09-11",
    "date": {
     "bm": "11–13 Sep 2026",
@@ -498,14 +1374,76 @@ window.TECC_DATA={
     "bm": "Latihan debat (JPA/UBI)",
     "en": "Debate training (JPA/UBI)"
    },
+   "h": 12,
    "note": {
-    "bm": "12 jam tempahan diluluskan (3 hari × 4 jam) · semak pelaksanaan",
-    "en": "12 approved booked hours (3 days × 4 h) · verify it took place"
+    "bm": "3 hari × 4 jam · tempahan e-Booking diluluskan.",
+    "en": "3 days × 4 h · approved e-Booking."
    },
    "status": "booked",
    "evidence": [
     "l_ebook"
-   ]
+   ],
+   "room": "tecc2"
+  },
+  {
+   "id": "a6",
+   "sort": "2026-11-06",
+   "date": {
+    "bm": "6 Nov 2026",
+    "en": "6 Nov 2026"
+   },
+   "title": {
+    "bm": "Mesyuarat CSR Jabatan Pengajian Am",
+    "en": "General Studies Department CSR meeting"
+   },
+   "h": 2,
+   "note": {
+    "bm": "3.00–5.00 petang.",
+    "en": "3.00–5.00 pm."
+   },
+   "status": "done",
+   "evidence": [],
+   "room": "tecc2"
+  },
+  {
+   "id": "a7",
+   "sort": "2026-07-01",
+   "date": {
+    "bm": "Sesi I 2026/2027 · setiap Rabu",
+    "en": "Session I 2026/2027 · every Wednesday"
+   },
+   "title": {
+    "bm": "Aktiviti Ko-Kurikulum (English Club)",
+    "en": "Co-curricular activity (English Club)"
+   },
+   "h": 42,
+   "note": {
+    "bm": "2.15–5.15 petang · 3 jam × 14 minggu.",
+    "en": "2.15–5.15 pm · 3 h × 14 weeks."
+   },
+   "status": "done",
+   "evidence": [],
+   "room": "tecc2"
+  },
+  {
+   "id": "a8",
+   "sort": "2026-12-01",
+   "date": {
+    "bm": "Sepanjang minggu kuliah · setiap Jumaat",
+    "en": "Teaching weeks · every Friday"
+   },
+   "title": {
+    "bm": "Penyelenggaraan dan kemas bilik TECC 2.0",
+    "en": "TECC 2.0 maintenance and room tidying"
+   },
+   "h": 45,
+   "note": {
+    "bm": "3.00–5.00 petang, pada Jumaat tanpa kelas atau tempahan (24 Jumaat × 2 j, tolak cuti dan tempahan pada slot sama).",
+    "en": "3.00–5.00 pm on Fridays without classes or bookings (24 Fridays × 2 h, less holidays and bookings in the same slot)."
+   },
+   "status": "done",
+   "evidence": [],
+   "room": "tecc2"
   },
   {
    "id": "b1",
@@ -582,17 +1520,18 @@ window.TECC_DATA={
     "en": "16 Mar 2026"
    },
    "title": {
-    "bm": "Skrin Hijau (JPA)",
-    "en": "Green Screen (JPA)"
+    "bm": "Shooting Raya JPA · Green Screen",
+    "en": "Raya JPA filming · Green Screen"
    },
    "note": {
-    "bm": "11:00–13:00 · aktiviti belum disahkan",
-    "en": "11:00–13:00 · activity unverified"
+    "bm": "11:00–13:00; dilaksanakan, ikut tempahan. Sudah dikira dalam 136j 19m.",
+    "en": "11:00–13:00; held, booking hours used. Already included in 136h 19m."
    },
-   "status": "booked",
+   "status": "done",
    "evidence": [
     "l_f4"
-   ]
+   ],
+   "h": 2
   },
   {
    "id": "b5",
@@ -662,12 +1601,432 @@ window.TECC_DATA={
     9,
     10
    ]
+  },
+  {
+   "id": "a9",
+   "room": "tecc2",
+   "sort": "2026-06-22",
+   "date": {
+    "bm": "22 Jun 2026",
+    "en": "22 Jun 2026"
+   },
+   "title": {
+    "bm": "Bengkel Peer Checking",
+    "en": "Peer Checking workshop"
+   },
+   "h": null,
+   "note": {
+    "bm": "09:00–17:00; 8 jam kasar, rehat dan pertindihan PdP belum disahkan.",
+    "en": "09:00–17:00; 8 gross hours, breaks and teaching overlap pending."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "c1",
+   "room": "tecc4",
+   "sort": "2026-01-22",
+   "date": {
+    "bm": "22 Jan 2026",
+    "en": "22 Jan 2026"
+   },
+   "title": {
+    "bm": "Kursus TECC Smart Teaching · Hari 2",
+    "en": "TECC Smart Teaching · Day 2"
+   },
+   "h": 6,
+   "note": {
+    "bm": "09:30–16:30; rehat 1 jam.",
+    "en": "09:30–16:30; 1 h break."
+   },
+   "status": "done",
+   "evidence": []
+  },
+  {
+   "id": "c2",
+   "room": "tecc4",
+   "sort": "2026-01-28",
+   "date": {
+    "bm": "28–29 Jan 2026",
+    "en": "28–29 Jan 2026"
+   },
+   "title": {
+    "bm": "Bengkel Pengenalan TECC 4.0 – PeL Jabatan",
+    "en": "TECC 4.0 introduction workshop – departmental PeL"
+   },
+   "h": null,
+   "note": {
+    "bm": "08:00–17:00; 18 jam kasar, rehat dan hari kedua perlu semakan.",
+    "en": "08:00–17:00; 18 gross hours, breaks and day two pending."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "c3",
+   "room": "tecc4",
+   "sort": "2026-04-29",
+   "date": {
+    "bm": "29 Apr 2026",
+    "en": "29 Apr 2026"
+   },
+   "title": {
+    "bm": "Lawatan BIPD ke TECC PD",
+    "en": "BIPD visit to TECC PD"
+   },
+   "h": null,
+   "note": {
+    "bm": "09:00–13:00; tempoh khusus bilik belum disahkan.",
+    "en": "09:00–13:00; time specifically in room unconfirmed."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "c4",
+   "room": "tecc4",
+   "sort": "2026-06-10",
+   "date": {
+    "bm": "10–11 Jun 2026",
+    "en": "10–11 Jun 2026"
+   },
+   "title": {
+    "bm": "Bengkel TikTok Tutor",
+    "en": "TikTok Tutor workshop"
+   },
+   "h": null,
+   "note": {
+    "bm": "Masa belum disahkan.",
+    "en": "Times unconfirmed."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "c5",
+   "room": "tecc4",
+   "sort": "2026-07-02",
+   "date": {
+    "bm": "2 Jul 2026",
+    "en": "2 Jul 2026"
+   },
+   "title": {
+    "bm": "Bengkel RMI Future · Green Screen & VR",
+    "en": "RMI Future workshop · Green Screen & VR"
+   },
+   "h": null,
+   "note": {
+    "bm": "Pelaksanaan disokong sijil dan foto; tempoh belum disahkan.",
+    "en": "Certificate and photos support activity; duration unconfirmed."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "c6",
+   "room": "tecc4",
+   "sort": "2026-08-19",
+   "date": {
+    "bm": "19–20 Ogos 2026",
+    "en": "19–20 Aug 2026"
+   },
+   "title": {
+    "bm": "Persediaan AKRI / TECC Sharing / ARIF",
+    "en": "AKRI preparation / TECC Sharing / ARIF"
+   },
+   "h": 10.75,
+   "note": {
+    "bm": "09:00–17:00; rehat 13:00–14:00. 14 jam aktiviti, tolak 3.25 jam tempahan bertindih.",
+    "en": "09:00–17:00; lunch 13:00–14:00. 14 activity hours less 3.25 overlapping booking hours."
+   },
+   "status": "done",
+   "evidence": []
+  },
+  {
+   "id": "c7",
+   "room": "tecc4",
+   "sort": "2026-10-30",
+   "date": {
+    "bm": "30 Okt 2026",
+    "en": "30 Oct 2026"
+   },
+   "title": {
+    "bm": "Kursus EV-XPLORE · VR dalam Pendidikan Teknikal",
+    "en": "EV-XPLORE · VR in technical education"
+   },
+   "h": 9,
+   "note": {
+    "bm": "08:00–17:00; 19 orang direkod (15 peserta, 2 penceramah, 2 fasilitator); laporan perlu semakan.",
+    "en": "08:00–17:00; 19 recorded (15 participants, 2 speakers, 2 facilitators); report pending review."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "c8",
+   "room": "tecc4",
+   "sort": "2026-11-09",
+   "date": {
+    "bm": "9–16 Nov 2026",
+    "en": "9–16 Nov 2026"
+   },
+   "title": {
+    "bm": "Persediaan Finalis AKRI",
+    "en": "AKRI finalist preparation"
+   },
+   "h": null,
+   "note": {
+    "bm": "09:00–17:00; hari sebenar dan rehat belum disahkan.",
+    "en": "09:00–17:00; actual working days and breaks unconfirmed."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "c9",
+   "room": "tecc4",
+   "sort": "2026-12-01",
+   "date": {
+    "bm": "Dis 2026",
+    "en": "Dec 2026"
+   },
+   "title": {
+    "bm": "Bengkel Pembangunan SIMLAB",
+    "en": "SIMLAB development workshop"
+   },
+   "h": null,
+   "note": {
+    "bm": "Status pelaksanaan belum disahkan.",
+    "en": "Completion unconfirmed."
+   },
+   "status": "pending",
+   "evidence": []
+  },
+  {
+   "id": "p0",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "PSH",
+    "en": "Lifelong learning"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "p1",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "Pemasangan tinted bilik",
+    "en": "Window tint installation"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "p2",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "Bengkel Video AI",
+    "en": "AI video workshop"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "p3",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "Pembangunan Portal Booking",
+    "en": "Booking portal development"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "p4",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "Lawatan Pengarah",
+    "en": "Director visit"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "p5",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "Pemasangan TECC 4.0",
+    "en": "TECC 4.0 installation"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "p6",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "Shooting Inovasi GENACITY",
+    "en": "GENACITY innovation filming"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "p7",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "Taklimat SOLS bersama Pengarah & TPA",
+    "en": "SOLS briefing with management"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "p8",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "Lawatan Kolaborasi",
+    "en": "Collaboration visit"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "p9",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "Rakaman Perkongsian Ramadan",
+    "en": "Ramadan sharing recording"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
+  },
+  {
+   "id": "p10",
+   "room": "tecc4",
+   "sort": "2026-99-99",
+   "date": {
+    "bm": "Belum disahkan",
+    "en": "Unconfirmed"
+   },
+   "title": {
+    "bm": "Shooting Raya AMP",
+    "en": "Management Raya filming"
+   },
+   "h": null,
+   "note": {
+    "bm": "Folder bukti dikenal pasti; tarikh, tempoh dan kategori perlu disahkan.",
+    "en": "Evidence folder identified; date, duration and category pending verification."
+   },
+   "status": "partial",
+   "evidence": []
   }
  ],
  "evidence": {
   "note": {
-   "bm": "Kiraan indikatif daripada carian Drive (100 hasil pertama) pada 23 Nov 2026. Sekurang-kurangnya; bukan jumlah muktamad.",
-   "en": "Indicative count from a Drive search (first 100 hits) on 23 Nov 2026. At least; not a final total."
+   "bm": "Kiraan foto terdahulu (23 Nov) bersifat indikatif. Rekod tempahan dikemas kini 26 Nov; bukti tambahan disenaraikan dalam daftar, akses perlu disahkan.",
+   "en": "Earlier photo counts (23 Nov) are indicative. Bookings updated 26 Nov; additional evidence is listed in the register, access pending verification."
   },
   "byMonth": [
    {
@@ -695,41 +2054,7 @@ window.TECC_DATA={
     "unass": 0
    }
   ],
-  "unmatched": [
-   {
-    "date": {
-     "bm": "20, 21, 28 Jan; 11 Feb",
-     "en": "20, 21, 28 Jan; 11 Feb"
-    },
-    "room": "tecc4",
-    "note": {
-     "bm": "Ada gambar/video tetapi tiada tempahan dalam senarai (senarai bermula Feb)",
-     "en": "Photos/videos exist but no booking in the list (list starts Feb)"
-    }
-   },
-   {
-    "date": {
-     "bm": "2 dan 10 Mac",
-     "en": "2 and 10 Mar"
-    },
-    "room": "tecc4",
-    "note": {
-     "bm": "19 fail pada 10 Mac; tempahan Mac dalam senarai ialah 4–6, 12 dan 16 Mac",
-     "en": "19 files on 10 Mar; listed March bookings are 4–6, 12 and 16 Mar"
-    }
-   },
-   {
-    "date": {
-     "bm": "26 Feb, 4–6 & 12 & 16 Mac, 29 Jul, Ogos–Okt",
-     "en": "26 Feb, 4–6, 12 & 16 Mar, 29 Jul, Aug–Oct"
-    },
-    "room": "tecc4",
-    "note": {
-     "bm": "Tempahan diluluskan tetapi tiada gambar ditemui (tiada fail selepas 13 Apr dalam hasil carian)",
-     "en": "Approved bookings but no photos found (no files after 13 Apr in the search hits)"
-    }
-   }
-  ]
+  "unmatched": []
  },
  "kinds": {
   "guide": {
@@ -843,7 +2168,6 @@ window.TECC_DATA={
     "bm": "e-Booking JPA (fail dinamakan 2025; data 2026)",
     "en": "e-Booking JPA (file named 2025; contains 2026 data)"
    },
-   "url": "https://docs.google.com/spreadsheets/d/1e9aOkxClZXcd8B57tCkNb_aq8L3EJjiK7d9fUYW3Wbw/edit",
    "status": "internal",
    "note": {
     "bm": "Sumber 16 jam tempahan TECC 2.0",
@@ -911,7 +2235,6 @@ window.TECC_DATA={
     "bm": "Folder gambar & video TECC 2.0",
     "en": "TECC 2.0 photo & video folder"
    },
-   "url": "https://drive.google.com/drive/folders/1Mv4b5rCul9cL6zHARygqOpI8YwFJ1IHn",
    "status": "internal",
    "note": {
     "bm": "Mengandungi fail 2025 (Jan, Sep–Nov 2025). Tapis atau pindahkan fail 2026 ke subfolder sebelum dipautkan sebagai bukti 2026.",
@@ -928,7 +2251,6 @@ window.TECC_DATA={
     "bm": "Briefing TECC 2.0 (21 Jan 2026)",
     "en": "Briefing TECC 2.0 (21 Jan 2026)"
    },
-   "url": "https://drive.google.com/drive/folders/1tQp_hIQHGrtAVS8JbugJZNq8xOznmrh-",
    "status": "internal",
    "note": {
     "bm": "Gambar dan video asal. Dipaparkan sebagai bukti atas keputusan pemilik laman.",
@@ -945,7 +2267,6 @@ window.TECC_DATA={
     "bm": "TECC 2.0 Guideline Final",
     "en": "TECC 2.0 Guideline Final"
    },
-   "url": "https://drive.google.com/file/d/1AW2vlGyAqkmgnSeHxnPtglEDmPKqzrPJ/view",
    "status": "internal",
    "note": {
     "bm": "Sahkan versi berkuat kuasa 2026",
@@ -962,7 +2283,6 @@ window.TECC_DATA={
     "bm": "A guide to operate TeCC (slaid)",
     "en": "A guide to operate TeCC (slides)"
    },
-   "url": null,
    "status": "hold",
    "note": {
     "bm": "Mengandungi kata laluan Wi-Fi. Sediakan versi tanpa kata laluan sebelum dipautkan.",
@@ -979,7 +2299,6 @@ window.TECC_DATA={
     "bm": "TECC Educator Module Guide",
     "en": "TECC Educator Module Guide"
    },
-   "url": "https://docs.google.com/document/d/148a-QnJbEUU7Bpfdb29V8nmAC6BAQPP78thcWXMBYUs/edit",
    "status": "internal",
    "note": {
     "bm": "Rujukan tambahan untuk SOP",
@@ -996,7 +2315,6 @@ window.TECC_DATA={
     "bm": "Google Sites TeCC@PPD",
     "en": "Google Sites TeCC@PPD"
    },
-   "url": "https://sites.google.com/polipd.edu.my/teccppd/tecc",
    "status": "internal",
    "note": {
     "bm": "Tapak dicipta oleh pemilik laman dan menjadi rujukan bukti. Memerlukan log masuk akaun POLIPD: semak sama ada penilai luar boleh membukanya.",
@@ -1013,7 +2331,6 @@ window.TECC_DATA={
     "bm": "Folder gambar & video TECC 4.0 (Jan–Apr 2026)",
     "en": "TECC 4.0 photo & video folder (Jan–Apr 2026)"
    },
-   "url": "https://drive.google.com/drive/folders/1GwKwu0BySc2_bZpAqjpEXljTYJJSqRdk",
    "status": "internal",
    "note": {
     "bm": "Bukti Jan–Apr sahaja. Tiada fail selepas 13 Apr. Gambar 10 Mac (19 fail) tiada tempahan sepadan.",
@@ -1030,7 +2347,6 @@ window.TECC_DATA={
     "bm": "Folder Digital EyeZ (foto Green Screen & kemudahan digital)",
     "en": "Digital EyeZ folder (Green Screen & digital facility photos)"
    },
-   "url": "https://drive.google.com/drive/folders/12vtQN7qaVXf_cqEIBoc7TImhDPQnh7au",
    "status": "internal",
    "note": null,
    "local": false
@@ -1112,7 +2428,6 @@ window.TECC_DATA={
     "bm": "Laporan produk POLYCCOM 2025: ARCHI-KIT",
     "en": "POLYCCOM 2025 product report: ARCHI-KIT"
    },
-   "url": "https://juliemarlina-collab.github.io/ARCHI-SPACE-by-PPD/evidence/archi-kit-polyccom-2025-product-report.pdf",
    "status": "internal",
    "note": {
     "bm": "Mengandungi nombor KP peserta. Jangan terbitkan awam tanpa menutupnya.",
@@ -1163,7 +2478,6 @@ window.TECC_DATA={
     "bm": "Usage & Guidelines Digital EyeZ",
     "en": "Usage & Guidelines Digital EyeZ"
    },
-   "url": "https://drive.google.com/file/d/1DWGIbLyiwfbqyIChhZT5gr-0Ik_pm8it/view",
    "status": "internal",
    "note": {
     "bm": "Panduan penggunaan yang dipautkan pada laman",
@@ -1180,7 +2494,6 @@ window.TECC_DATA={
     "bm": "TECC 4.0 DigitalEyez GP (versi dikemas kini)",
     "en": "TECC 4.0 DigitalEyez GP (updated version)"
    },
-   "url": "https://drive.google.com/file/d/16vmW1w0Lfl8R3S7MYnv9cPG_HAnKOilx/view",
    "status": "internal",
    "note": {
     "bm": "Dikongsi dengan anda. Bandingkan dengan fail di atas untuk tentukan versi rasmi.",
@@ -1197,7 +2510,6 @@ window.TECC_DATA={
     "bm": "Manual kerja Digital Cubix · Digital EyeZ",
     "en": "Digital Cubix work manual · Digital EyeZ"
    },
-   "url": "https://drive.google.com/file/d/15l8yDBDycXG11oETwgwYRov850P_JgCZ/view",
    "status": "internal",
    "note": {
     "bm": "Calon rujukan tatacara penyelenggaraan",
@@ -1214,7 +2526,6 @@ window.TECC_DATA={
     "bm": "Sijil Pemasangan dan Pengujian (SPP) TECC 4.0 · 30 Sep 2025",
     "en": "Installation and Testing Certificate (SPP) TECC 4.0 · 30 Sep 2025"
    },
-   "url": "https://drive.google.com/file/d/13wMmzddp4zuy399CzJgaoYtAg9gaHBHs/view",
    "status": "hold",
    "note": {
     "bm": "Bukti tahun mula operasi. Mengandungi no. kontrak dan tandatangan: lampirkan hanya dengan kebenaran, jangan masukkan ke laman awam.",
@@ -1231,7 +2542,6 @@ window.TECC_DATA={
     "bm": "Pelan susun atur cadangan TECC 4.0 (13.30 m × 7.10 m)",
     "en": "TECC 4.0 proposed layout plan (13.30 m × 7.10 m)"
    },
-   "url": "https://drive.google.com/file/d/1nQfc0rFFiQfU3xd98-bpQjfDbViGihYm/view",
    "status": "internal",
    "note": {
     "bm": "Tajuk pelan: cadangan. Sahkan susun atur sebenar.",
@@ -1248,7 +2558,6 @@ window.TECC_DATA={
     "bm": "Template laporan projek P64",
     "en": "P64 project report template"
    },
-   "url": "https://drive.google.com/file/d/1O3UAOXiaBX6ZSTvPO4nloBucuw6TFyIu/view",
    "status": "internal",
    "note": {
     "bm": "Rujukan perolehan, bukan statistik penggunaan",
@@ -1265,7 +2574,6 @@ window.TECC_DATA={
     "bm": "VR LEARN TECC (cadangan integrasi VR/AR)",
     "en": "VR LEARN TECC (VR/AR integration proposal)"
    },
-   "url": "https://docs.google.com/document/d/1Oc_nPG7kMaw8ompHFtuIccCz5LodjiNON2OIZkHygvU/edit",
    "status": "internal",
    "note": null,
    "local": false
@@ -1279,7 +2587,6 @@ window.TECC_DATA={
     "bm": "Statistik Laporan Aktiviti 2026 (kursus VR ditangguhkan ke Dis 2026)",
     "en": "Activity Report Statistics 2026 (VR course postponed to Dec 2026)"
    },
-   "url": "https://docs.google.com/spreadsheets/d/13GLUeqadFj_p5aFqkQ0_WxwvzMgKBtDJENcEGo9byJA/edit",
    "status": "internal",
    "note": {
     "bm": "Belum disemak baris demi baris",
@@ -1296,7 +2603,6 @@ window.TECC_DATA={
     "bm": "Surat JPPKK/BIPD: Bengkel TECCgogy & ARIF, 18–20 Ogos 2026",
     "en": "JPPKK/BIPD letter: TECCgogy & ARIF workshop, 18–20 Aug 2026"
    },
-   "url": "https://drive.google.com/file/d/1WMVX6-lmNKswt-H3jNszWSuo9E8i3Y0R/view",
    "status": "hold",
    "note": {
     "bm": "Senarai nama staf. Ringkaskan atau minta kebenaran sebelum dilampirkan.",
@@ -1320,6 +2626,190 @@ window.TECC_DATA={
     "en": "No link yet. Add when posts are published."
    },
    "local": false
+  },
+  {
+   "id": "l_cidos",
+   "room": "tecc2",
+   "comp": "c2",
+   "kind": "photo",
+   "title": {
+    "bm": "Platform CIDOS POLYCC (kursus JPA Sesi 2025/2026)",
+    "en": "CIDOS POLYCC platform (JPA courses, Session 2025/2026)"
+   },
+   "url": "assets/gallery/cidos-polycc.webp",
+   "status": "ready",
+   "note": {
+    "bm": "Tangkap skrin Google Sites TeCC@PPD.",
+    "en": "Screenshot from the TeCC@PPD Google Site."
+   },
+   "local": true
+  },
+  {
+   "id": "l_micro",
+   "room": "tecc2",
+   "comp": "c2",
+   "kind": "photo",
+   "title": {
+    "bm": "Platform Micro-Credential POLYCC",
+    "en": "Micro-Credential POLYCC platform"
+   },
+   "url": "assets/gallery/micro-credential-polycc.webp",
+   "status": "ready",
+   "note": {
+    "bm": "Tangkap skrin Google Sites TeCC@PPD.",
+    "en": "Screenshot from the TeCC@PPD Google Site."
+   },
+   "local": true
+  },
+  {
+   "id": "new_a9",
+   "room": "tecc2",
+   "comp": "c2",
+   "kind": "guide",
+   "title": {
+    "bm": "22 Jun 2026 · Bengkel Peer Checking",
+    "en": "22 Jun 2026 · Peer Checking workshop"
+   },
+   "status": "internal",
+   "note": {
+    "bm": "Folder bukti dalam master Google Sheet; akses perlu disahkan sebelum penerbitan.",
+    "en": "Evidence folder in master Google Sheet; verify access before publication."
+   }
+  },
+  {
+   "id": "new_c1",
+   "room": "tecc4",
+   "comp": "c2",
+   "kind": "guide",
+   "title": {
+    "bm": "22 Jan 2026 · Kursus TECC Smart Teaching · Hari 2",
+    "en": "22 Jan 2026 · TECC Smart Teaching · Day 2"
+   },
+   "status": "internal",
+   "note": {
+    "bm": "Folder bukti dalam master Google Sheet; akses perlu disahkan sebelum penerbitan.",
+    "en": "Evidence folder in master Google Sheet; verify access before publication."
+   }
+  },
+  {
+   "id": "new_c2",
+   "room": "tecc4",
+   "comp": "c2",
+   "kind": "guide",
+   "title": {
+    "bm": "28–29 Jan 2026 · Bengkel Pengenalan TECC 4.0 – PeL Jabatan",
+    "en": "28–29 Jan 2026 · TECC 4.0 introduction workshop – departmental PeL"
+   },
+   "status": "internal",
+   "note": {
+    "bm": "Folder bukti dalam master Google Sheet; akses perlu disahkan sebelum penerbitan.",
+    "en": "Evidence folder in master Google Sheet; verify access before publication."
+   }
+  },
+  {
+   "id": "new_c3",
+   "room": "tecc4",
+   "comp": "c2",
+   "kind": "guide",
+   "title": {
+    "bm": "29 Apr 2026 · Lawatan BIPD ke TECC PD",
+    "en": "29 Apr 2026 · BIPD visit to TECC PD"
+   },
+   "status": "internal",
+   "note": {
+    "bm": "Folder bukti dalam master Google Sheet; akses perlu disahkan sebelum penerbitan.",
+    "en": "Evidence folder in master Google Sheet; verify access before publication."
+   }
+  },
+  {
+   "id": "new_c4",
+   "room": "tecc4",
+   "comp": "c2",
+   "kind": "guide",
+   "title": {
+    "bm": "10–11 Jun 2026 · Bengkel TikTok Tutor",
+    "en": "10–11 Jun 2026 · TikTok Tutor workshop"
+   },
+   "status": "internal",
+   "note": {
+    "bm": "Folder bukti dalam master Google Sheet; akses perlu disahkan sebelum penerbitan.",
+    "en": "Evidence folder in master Google Sheet; verify access before publication."
+   }
+  },
+  {
+   "id": "new_c5",
+   "room": "tecc4",
+   "comp": "c2",
+   "kind": "guide",
+   "title": {
+    "bm": "2 Jul 2026 · Bengkel RMI Future · Green Screen & VR",
+    "en": "2 Jul 2026 · RMI Future workshop · Green Screen & VR"
+   },
+   "status": "internal",
+   "note": {
+    "bm": "Folder bukti dalam master Google Sheet; akses perlu disahkan sebelum penerbitan.",
+    "en": "Evidence folder in master Google Sheet; verify access before publication."
+   }
+  },
+  {
+   "id": "new_c6",
+   "room": "tecc4",
+   "comp": "c2",
+   "kind": "guide",
+   "title": {
+    "bm": "19–20 Ogos 2026 · Persediaan AKRI / TECC Sharing / ARIF",
+    "en": "19–20 Ogos 2026 · AKRI preparation / TECC Sharing / ARIF"
+   },
+   "status": "internal",
+   "note": {
+    "bm": "Folder bukti dalam master Google Sheet; akses perlu disahkan sebelum penerbitan.",
+    "en": "Evidence folder in master Google Sheet; verify access before publication."
+   }
+  },
+  {
+   "id": "new_c7",
+   "room": "tecc4",
+   "comp": "c2",
+   "kind": "guide",
+   "title": {
+    "bm": "30 Okt 2026 · Kursus EV-XPLORE · VR dalam Pendidikan Teknikal",
+    "en": "30 Okt 2026 · EV-XPLORE · VR in technical education"
+   },
+   "status": "internal",
+   "note": {
+    "bm": "Folder bukti dalam master Google Sheet; akses perlu disahkan sebelum penerbitan.",
+    "en": "Evidence folder in master Google Sheet; verify access before publication."
+   }
+  },
+  {
+   "id": "new_c8",
+   "room": "tecc4",
+   "comp": "c2",
+   "kind": "guide",
+   "title": {
+    "bm": "9–16 Nov 2026 · Persediaan Finalis AKRI",
+    "en": "9–16 Nov 2026 · AKRI finalist preparation"
+   },
+   "status": "internal",
+   "note": {
+    "bm": "Folder bukti dalam master Google Sheet; akses perlu disahkan sebelum penerbitan.",
+    "en": "Evidence folder in master Google Sheet; verify access before publication."
+   }
+  },
+  {
+   "id": "new_c9",
+   "room": "tecc4",
+   "comp": "c2",
+   "kind": "guide",
+   "title": {
+    "bm": "Dis 2026 · Bengkel Pembangunan SIMLAB",
+    "en": "Dis 2026 · SIMLAB development workshop"
+   },
+   "status": "internal",
+   "note": {
+    "bm": "Folder bukti dalam master Google Sheet; akses perlu disahkan sebelum penerbitan.",
+    "en": "Evidence folder in master Google Sheet; verify access before publication."
+   }
   }
  ],
  "concept": {
@@ -2005,8 +3495,8 @@ window.TECC_DATA={
         "en": "LMS CIDOS platform"
        },
        "mk": 20,
-       "st": "pending",
-       "link": null
+       "st": "ready",
+       "link": "assets/gallery/cidos-polycc.webp"
       },
       {
        "n": {
@@ -2059,7 +3549,7 @@ window.TECC_DATA={
         "en": "Utility factor (75–80%)"
        },
        "mk": 10,
-       "st": "pending",
+       "st": "ready",
        "link": "#usage"
       },
       {
@@ -2871,20 +4361,24 @@ window.TECC_DATA={
  "analysis": {
   "tecc2": [
    {
-    "bm": "Jadual Jan 2026 menunjukkan kelas DUE dan DKA/DKM/DEQ/DEG menggunakan bilik. Jam dikira daripada slot imej dan perlu disahkan dengan fail aSc.",
-    "en": "The Jan 2026 timetable shows DUE and DKA/DKM/DEQ/DEG classes using the room. Hours are counted from timetable image slots and need verifying against the aSc file."
+    "bm": "Faktor guna dilaporkan 81.7% (816.5 / 999 jam), termasuk penyelenggaraan dan tempahan. Belum disahkan sebagai jam fizikal unik.",
+    "en": "Reported utility factor 81.7% (816.5 / 999 h), including maintenance and bookings; not verified as unique physical hours."
    },
    {
-    "bm": "Taklimat 21 Jan 2026 mempunyai bukti gambar dan video; tiada rekod e-Booking untuk sesi itu.",
-    "en": "The 21 Jan 2026 briefing has photo and video evidence; there is no e-Booking record for it."
+    "bm": "PdP berjadual menyumbang 633 jam: Sesi II 2025/2026 (25 j/minggu) dan Sesi I 2026/2027 (22 j/minggu).",
+    "en": "Scheduled classes contribute 633 h: Session II 2025/2026 (25 h/week) and Session I 2026/2027 (22 h/week)."
    },
    {
-    "bm": "Ko-kurikulum Rabu hanya dikira pada slot yang tidak bertindih dengan kelas (DKA4C bertindih 2.15–4.15 petang).",
-    "en": "Wednesday co-curricular is counted only in slots that do not overlap classes (DKA4C overlaps 2.15–4.15 pm)."
+    "bm": "Penggunaan bukan PdP berjumlah 183.5 jam: ko-kurikulum 42 j, program dan aktiviti institusi 42.25 j, tempahan 48 j, penggunaan tanpa tempahan 6.25 j dan penyelenggaraan mingguan 45 j.",
+    "en": "Non-class use totals 183.5 h: co-curricular 42 h, programmes and institutional activities 42.25 h, bookings 48 h, unbooked use 6.25 h and weekly maintenance 45 h."
    },
    {
-    "bm": "Faktor utiliti 75–80% (dasar BIPD) belum boleh dikira kerana jam penggunaan setahun belum disahkan.",
-    "en": "The 75–80% utility factor (BIPD policy) cannot be computed yet because annual usage hours are not verified."
+    "bm": "Ujian Lisan MUET (April 2026) menggunakan bilik selama tujuh hari berasingan dan menyumbang 27 jam bersih.",
+    "en": "The MUET Speaking Test (April 2026) used the room over seven separate days and contributes 27 net hours."
+   },
+   {
+    "bm": "TECC 2.0 turut digunakan untuk kursus, mesyuarat jabatan dan unit, latihan debat dan lawatan delegasi.",
+    "en": "TECC 2.0 was also used for courses, department and unit meetings, debate training and a delegation visit."
    }
   ],
   "tecc4": [
@@ -2897,8 +4391,8 @@ window.TECC_DATA={
     "en": "Class Room dominates (46 bookings, 107h 19m). VR Set 5 bookings, Green Screen 4."
    },
    {
-    "bm": "Ogos ialah satu-satunya bulan yang sudah dipecahkan (22 tempahan, 49j 14m). 35 tempahan lain menunggu eksport tarikh.",
-    "en": "August is the only month already split out (22 bookings, 49h 14m). The other 35 bookings await a dated export."
+    "bm": "Kesemua 57 tempahan diluluskan telah dipadankan dengan bulan dan jabatan; Ogos tertinggi dalam rekod (22 tempahan, 49j 14m).",
+    "en": "All 57 approved bookings now have monthly and department allocation; August leads the records (22 bookings, 49h 14m)."
    },
    {
     "bm": "Tempahan Class Room dan peralatan serentak tidak boleh digabungkan menjadi satu kadar penggunaan bilik.",
@@ -2907,14 +4401,18 @@ window.TECC_DATA={
    {
     "bm": "ARCHI-SPACE menyokong Elemen 4 (inovasi dan penyelidikan) dengan bukti CORR, kajian dan hak cipta.",
     "en": "ARCHI-SPACE supports Element 4 (innovation and research) with CORR, study and copyright evidence."
+   },
+   {
+    "bm": "Aktiviti tambahan 25.75 jam; persediaan AKRI 14 jam bersih selepas rehat, dengan 10.75 jam tambahan selepas tolak 3.25 jam pertindihan. Shooting Raya JPA 2 jam sudah termasuk tempahan.",
+    "en": "Additional activities 25.75 h; AKRI preparation 14 h net of lunch, with 10.75 h additional after deducting 3.25 h overlap. Raya JPA filming 2 h already included in bookings."
    }
   ]
  },
  "improve": {
   "tecc2": [
    {
-    "bm": "Kira faktor utiliti daripada jadual aSc dan e-Booking.",
-    "en": "Compute the utility factor from the aSc timetable and e-Booking."
+    "bm": "Kekalkan faktor guna melebihi 75% pada 2027 dengan memastikan slot ko-kurikulum, penyelenggaraan mingguan dan tempahan diteruskan.",
+    "en": "Keep the utility factor above 75% in 2027 by continuing the co-curricular, weekly maintenance and booking slots."
    },
    {
     "bm": "Lampirkan carta organisasi dan versi SOP semasa.",
