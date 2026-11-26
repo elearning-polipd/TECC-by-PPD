@@ -33,3 +33,23 @@ TECC 4.0 location and capacity; TECC 2.0 start year; participant counts; officer
 
 ## ARCHI-SPACE (TECC 4.0, Elemen 4)
 Dirujuk daripada repo/laman GitHub ARCHI-SPACE-by-PPD: CORR DCA40462, kajian ARCHI-KIT 2026, MyIPO CRDV2025M07544, laporan POLYCCOM 2025 (ada nombor KP: jangan terbit awam), gambar sesi VR. Pautan menuju ke laman GitHub Pages anda.
+
+## V6 phase 1 — continuity narrative (25 Nov 2026)
+- Homepage journey (2024–2026) and proposed future direction; links to both previous reports.
+- Existing archive expanded to 2024–2025 without changing its URL.
+- 2025 scheduled PdP: 532 h, source TECC Annual Report 2025; 2026 scheduled PdP: 633 h, provisional from existing site data.
+- No changes to underlying utilisation calculations or evidence permissions; reconcile master spreadsheet and confirm official reporting methodology before final submission.
+- Previous website content and external links have not been independently browser-tested.
+
+### V6.1 visual polish
+- Aligned chapter numbers, icons and left-aligned labels on both room pages; preserved horizontal mobile tabs.
+- Applied distinct mint/teal and lavender/violet homepage room-card panels, badges, arrows and subtle photo overlays. Original photos and reporting figures unchanged.
+
+## V6.2
+- Explicit room-specific classes preserve teal/violet identity after BM/EN link rewriting.
+- Homepage: single room title, feature tags, labelled calls to action, bilingual future-direction banner. Original photos and reporting data retained.
+
+## V6.3 — 26 November 2026
+- Snapshot of the master Google Sheet. Complete anonymised booking registers (21 TECC 2.0, 63 Digital EyeZ), all approved Digital EyeZ monthly/department allocations, activity updates, and searchable tables.
+- Reported TECC 2.0 totals retained. Digital EyeZ 25.75 additional hours; AKRI 10.75 additional after overlap deduction; Raya 2 h already booked. Dashboard 163.06 h includes pending 1 h and rounding; not physical utilisation. Approved resource hours plus additional activities 162 h 04 m, further overlap review required.
+- Restricted/internal register URLs removed; newly identified evidence listed without publishing unverified access links. Original master sheet remains the source for reviewer evidence.

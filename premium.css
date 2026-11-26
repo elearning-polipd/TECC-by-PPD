@@ -54,3 +54,64 @@ html{scroll-padding-top:90px}body{overflow-x:hidden;-webkit-text-size-adjust:100
  .nextroom{min-width:0}.footlinks{display:flex;flex-wrap:wrap;gap:12px}.footlinks a{font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){.room-card:hover .room-art.photo-cover img{transform:none}}
+
+/* V6 continuity narrative */
+.journey{scroll-margin-top:90px}.journey-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:28px 0 16px}.journey-card{border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0;box-shadow:0 10px 35px #14233c12;border:1px solid #dce6ec;background:#edf5fb;color:#182c45}.journey-card.integration{background:#e7f7f3;color:#12463f;border-color:#bfe7df}.journey-card.innovation{background:#eee9fa;color:#34275c;border-color:#d8cbed}.journey-year{font-size:clamp(40px,5vw,68px);font-weight:850;line-height:1;letter-spacing:-.055em}.journey-card h3{font-size:1.45rem;margin:0}.journey-card p{font-size:1rem;line-height:1.6;margin:0}.journey-metric{display:block;margin-top:auto;padding-top:12px;border-top:1px solid #73839750}.journey-link{display:inline-flex;gap:8px;align-items:center;width:fit-content;max-width:100%;padding:10px 16px;border-radius:100px;border:1px solid currentColor;text-decoration:none;font-weight:650;transition:transform .2s ease}.journey-link:hover{transform:translateY(-2px)}.journey-link:focus-visible{outline:3px solid #1f82bd;outline-offset:4px}.journey-actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.journey-future{margin-top:30px;padding:clamp(24px,4vw,46px);border-radius:24px;background:linear-gradient(115deg,#14243e,#35306c);color:#fff}.journey-future h3{font-size:clamp(26px,4vw,42px);margin:12px 0}.journey-future p{max-width:70ch;color:#e5eaf8}.journey-future .kicker{color:#a9eee1}@media(max-width:760px){.journey-grid{grid-template-columns:1fr}.journey-card{padding:24px}}@media(prefers-reduced-motion:reduce){.journey-link{transition:none}.journey-link:hover{transform:none}}
+
+/* V6.1: consistent chapter navigation and distinctive room identities */
+.rl .tabbar .tabbtn {text-align:left;align-items:center;gap:9px;line-height:1.4;min-height:54px;}
+.rl .tabbar .tabbtn > i {width:26px;min-width:26px;height:26px;flex:0 0 26px;}
+.rl .tabbar .tabbtn > .ico-tab {width:23px;height:23px;flex:0 0 23px;object-fit:contain;margin:0;}
+.rl .tabbar .tabbtn > span {display:block;min-width:0;text-align:left;white-space:normal;overflow-wrap:break-word;}
+@media(min-width:901px){
+ .rl .tabbar .tabbtn {display:grid;grid-template-columns:26px 23px minmax(0,1fr);justify-content:start;padding:12px 13px;}
+ .rl .tabbar .tabbtn > span {grid-column:3;}
+ .rl .tabbar .tabbtn > .ico-tab {grid-column:2;grid-row:1;}
+}
+@media(max-width:900px){
+ .rl .tabbar .tabbtn {min-height:43px;gap:7px;}
+ .rl .tabbar .tabbtn > span {white-space:nowrap;}
+ .rl .tabbar .tabbtn > i {width:21px;min-width:21px;height:21px;flex-basis:21px;}
+ .rl .tabbar .tabbtn > .ico-tab {width:20px;height:20px;flex-basis:20px;}
+}
+#choose .choice-grid .room-card {--room-ink:#074b43;--room-fill:#a6e7d7;--room-edge:#6ac6b2;--room-deep:#07534a;border:1px solid var(--room-edge);background:var(--room-fill);display:flex;flex-direction:column;}
+#choose .choice-grid .room-card[href="tecc4.html"] {--room-ink:#392367;--room-fill:#ddccfa;--room-edge:#b49ae7;--room-deep:#392468;}
+#choose .choice-grid .room-card .room-art {flex-shrink:0;background:var(--room-deep);}
+#choose .choice-grid .room-card .room-art.photo-cover::before {background:linear-gradient(180deg,rgba(5,24,23,.25),transparent 34%,rgba(5,24,23,.12) 55%,rgba(5,24,23,.72)),linear-gradient(135deg,rgba(9,127,109,.23),transparent 65%);}
+#choose .choice-grid .room-card[href="tecc4.html"] .room-art.photo-cover::before {background:linear-gradient(180deg,rgba(23,12,52,.25),transparent 34%,rgba(23,12,52,.12) 55%,rgba(23,12,52,.72)),linear-gradient(135deg,rgba(108,58,190,.25),transparent 65%);}
+#choose .choice-grid .room-card .room-info {background:var(--room-fill);color:var(--room-ink);flex:1;min-height:108px;border-top:3px solid var(--room-edge);}
+#choose .choice-grid .room-card .room-info h3,#choose .choice-grid .room-card .room-info p {color:var(--room-ink);}
+#choose .choice-grid .room-card .circle-arrow {background:var(--room-deep);color:white;border-color:var(--room-deep);transition:transform .2s ease;}
+#choose .choice-grid .room-card .tilt {background:var(--room-deep);border-color:#ffffff80;}
+#choose .choice-grid .room-card:hover .circle-arrow {transform:translate(2px,-2px);}
+@media(prefers-reduced-motion:reduce){#choose .choice-grid .room-card:hover .circle-arrow{transform:none}}
+
+/* V6.2 — explicit identities survive language query parameters */
+#choose .choice-grid .room-card.room-card--tecc2{--room-fill:#087d70;--room-deep:#075e54;--room-edge:#087d70;--room-ink:#fff;--room-tint:rgba(7,94,84,.23)}
+#choose .choice-grid .room-card.room-card--tecc4{--room-fill:#5934a4;--room-deep:#352064;--room-edge:#5934a4;--room-ink:#fff;--room-tint:rgba(89,52,164,.24)}
+#choose .choice-grid .room-card .room-art.photo-cover{height:auto;aspect-ratio:16/10;min-height:0;background:var(--room-deep)}
+#choose .choice-grid .room-card .room-art.photo-cover::before{background:linear-gradient(145deg,var(--room-tint),transparent 55%);box-shadow:none}
+#choose .choice-grid .room-card .room-art.photo-cover .tilt{background:var(--room-deep);color:#fff;z-index:2}
+#choose .choice-grid .room-card .room-info{display:flex;flex-direction:column;align-items:stretch;gap:18px;padding:24px 26px;min-height:0;border-top:0;background:var(--room-fill);color:#fff}
+#choose .choice-grid .room-card .room-info h3{color:#fff;font-size:clamp(23px,2.5vw,32px);line-height:1.2;margin-bottom:8px;letter-spacing:-.8px}
+#choose .choice-grid .room-card .room-info p{color:#fff;font-size:14px;line-height:1.5}
+.room-features{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:2px}
+.room-features span{background:#ffffff15;border:1px solid #ffffff55;color:#fff;padding:6px 10px;border-radius:100px;font-size:11px;font-weight:650;line-height:1.4}
+.room-cta{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #ffffff55;padding-top:13px;margin-top:auto;color:#fff;font-weight:750;font-size:14px}
+#choose .choice-grid .room-card .circle-arrow{background:#ffffff18;border:1px solid #ffffff70;color:#fff;width:40px;height:40px;display:grid;place-items:center}
+#choose .choice-grid .room-card:hover{box-shadow:0 18px 42px var(--room-tint)}
+#choose .choice-grid .room-card:focus-visible{outline:3px solid var(--room-deep);outline-offset:5px}
+.future-next{position:relative;overflow:hidden;margin-top:24px;padding:clamp(22px,4vw,42px);border-radius:24px;color:#fff;background:linear-gradient(120deg,#14243d,#30316b,#173d50);background-size:160% 160%;animation:future-glow 18s ease infinite alternate}
+.future-top{display:flex;align-items:center;gap:24px;justify-content:space-between}.future-top>div{max-width:760px}.future-next .kicker{color:#9de9df}.future-next h2{font-size:clamp(25px,3.3vw,42px);letter-spacing:-1px;line-height:1.14;margin:10px 0 12px;color:#fff}.future-next p{color:#e2e9f7;line-height:1.6;margin:0;font-size:14px}.future-orbit{width:clamp(85px,13vw,150px);flex-shrink:0;opacity:.95}.future-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-top:22px;margin-top:22px;border-top:1px solid #ffffff35}.future-pillars>div{display:flex;align-items:center;gap:12px;padding:16px;background:#ffffff0d;border:1px solid #ffffff25;border-radius:12px;color:#fff;font-size:14px;font-weight:650}.future-pillars svg{width:25px;height:25px;flex-shrink:0;color:#9de9df}.future-next .future-note{font-size:12px;margin-top:16px;color:#d3ddef}
+@keyframes future-glow{from{background-position:0 50%}to{background-position:100% 50%}}
+@media(max-width:760px){.future-pillars{grid-template-columns:1fr}.future-top{align-items:flex-start}.future-orbit{width:70px}.future-pillars>div{padding:12px}.choice-grid{grid-template-columns:1fr}}
+@media(max-width:560px){#choose .choice-grid .room-card .room-info{padding:20px;gap:15px}.future-orbit{display:none}}
+@media(prefers-reduced-motion:reduce){.future-next{animation:none}#choose .choice-grid .room-card,#choose .choice-grid .room-card .circle-arrow{transition:none;transform:none!important}}
+
+/* V6.3 reporting register */
+.booking-details{margin:1rem 0 2rem;padding:1rem;border:1px solid #dce3e7;border-radius:16px;background:var(--surface,#fff)}
+.booking-details summary{cursor:pointer;font-weight:700;padding:.5rem 0}
+.booking-search{display:block;width:min(100%,360px);border:1px solid #aebdc7;border-radius:8px;padding:.7rem;margin:.6rem 0 1rem;font:inherit;background:transparent;color:inherit}
+.booking-details tr[hidden]{display:none!important}
+.booking-details .tablewrap{max-height:480px;overflow:auto}
+.booking-details th{position:sticky;top:0;background:#f1f5f8;color:#17243b;z-index:1}
