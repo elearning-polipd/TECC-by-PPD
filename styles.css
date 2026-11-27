@@ -440,3 +440,23 @@ nav a,.menu a,.tabs button,.tab,.tabbar a,.tabbar button{min-height:44px;display
 .kpimap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
 .kpimap .kc{background:var(--card,#fff);border:1px solid rgba(0,0,0,.1);border-radius:14px;padding:16px}
 .kpimap .kc b{display:block;margin-bottom:6px}
+
+.embedshot{display:block;border-top:1px solid var(--line)}.embedshot img{display:block;width:100%;height:auto}
+
+/* V9.18 org chart */
+.orgchart{margin-top:20px;display:grid;gap:14px}
+.orgrow{display:grid;gap:12px;justify-items:center}
+.orgrow.r3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.orgrow.r2{grid-template-columns:repeat(2,minmax(200px,260px));justify-content:center}
+.orgp{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;background:#fff7e0;border:1px solid rgba(0,0,0,.1);border-radius:14px;padding:14px 12px;width:100%}
+.orgp b{font-size:14px;line-height:1.25}.orgp small{font-size:12px;opacity:.75;text-transform:uppercase;letter-spacing:.04em}
+.orgav{width:64px;height:64px;border-radius:50%;overflow:hidden;display:block;background:#e5ddc8;flex:none}
+.orgav img{width:100%;height:100%;object-fit:cover;transform:scale(1.18)}
+.orgav.ini{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:#1b4a41;background:#d6e9df}
+.orgteams{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.orgteam{background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:14px;overflow:hidden}
+.orgteam .orgp{border:0;border-radius:0;background:#ffe9a8}
+.orgteam ul{margin:0;padding:12px 16px 14px 30px;font-size:13px;line-height:1.5}
+
+.orgfig{margin:20px 0 0}.orgfig img{width:100%;height:auto;border-radius:16px;display:block}.orgfig figcaption{font-size:13px;opacity:.7;margin-top:8px}.orgtext{margin-top:14px}.orgtext summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
+
+.subh{margin:26px 0 10px;font-size:18px}.fbdims{display:grid;gap:8px;margin:14px 0}.fbd{display:grid;grid-template-columns:minmax(120px,200px) 1fr 44px;align-items:center;gap:10px;font-size:14px}.fbd i{display:block;height:10px;border-radius:6px;background:linear-gradient(90deg,#1f8a70 var(--w),#e4e8e3 var(--w))}.fbd b{text-align:right}

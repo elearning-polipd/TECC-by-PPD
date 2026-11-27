@@ -32,9 +32,9 @@ function views(D,room){
  return [
   {id:'mon',name:T('Bulanan','Monthly'),max:Math.max(...mon.map(x=>x.v)),bars:mon,sum:fmt(mon.reduce((a,b)=>a+b.v,0))+' '+U(),sumsub:T('Jam tempahan diluluskan, Jan–Nov','Approved booking hours, Jan–Nov'),small:true},
   {id:'year',name:T('Setahun','Full year'),max:999,bars:[
-   {v:999,c:'#fff',t:'glass',l:T('Kapasiti','Capacity'),d:T('Kapasiti setahun','Annual capacity')},
+   {v:999,c:'#fff',t:'glass',l:T('Kapasiti','Capacity'),d:T('Kapasiti setahun: 37 j × 27 minggu kuliah','Annual capacity: 37 h × 27 teaching weeks')},
    {v:tot,c:MINT,l:T('Digunakan','Used'),d:T('Jam penggunaan direkod, dashboard induk','Recorded usage hours, master dashboard')},
-   {v:749.25,c:ORG,l:T('Sasaran 75%','75% target'),d:T('Rujukan sasaran kapasiti 75%','75% capacity reference')}],sum:'61.3%',sumsub:T('Faktor penggunaan setahun','Annual utility factor')}];
+   {v:749.25,c:ORG,l:T('Sasaran 75%','75% target'),d:T('Rujukan sasaran kapasiti 75%','75% capacity reference')}],sum:'61.3%',sumsub:T('Faktor penggunaan setahun (termasuk 72 j asas 2025)','Annual utility factor (includes 72 h of 2025 foundation work)')}];
 }
 function build(host,room){
  const D=window.TECC_DATA;if(!D)return;
@@ -52,7 +52,7 @@ function build(host,room){
   h+='<div class="'+cls+'" data-i="'+i+'" tabindex="0" role="button" aria-label="'+esc(b.l+': '+fmt(b.v)+' '+U())+'" style="transform:translate3d('+(xs[i]-off)+'px,0,0)"><div class="d3-box" style="--c:'+b.c+';--w:'+W+'px;--d:'+D_+'px;--i:'+i+';width:'+W+'px;height:'+H+'px;left:'+(-W/2)+'px;top:'+(-H)+'px"><i class="f" style="left:0;top:0;width:'+W+'px;height:'+H+'px"></i><i class="b" style="left:0;top:0;width:'+W+'px;height:'+H+'px"></i><i class="l" style="left:'+((W-D_)/2)+'px;top:0;width:'+D_+'px;height:'+H+'px"></i><i class="r" style="left:'+((W-D_)/2)+'px;top:0;width:'+D_+'px;height:'+H+'px"></i><i class="t" style="left:0;top:'+(-D_/2)+'px;width:'+W+'px;height:'+D_+'px"></i></div><div class="d3-lab" style="--ty:'+(-H-4)+'px">'+fmt(b.v)+'</div><div class="d3-axis" style="--az:'+(D_/2+14)+'px">'+esc(b.g&&b.gi>=0&&(v.bars[i-1]&&v.bars[i-1].gi===b.gi)?b.g:b.l)+'</div></div>'});
  scene.innerHTML=h;
  list.innerHTML=v.bars.map((b,i)=>'<li><button type="button" data-i="'+i+'" aria-pressed="false" style="--c:'+(b.t==='glass'?'#c9bff7':b.c)+'"><i></i><em>'+esc((b.g?b.g+' · ':'')+b.l)+'</em><b>'+fmt(b.v)+' '+U()+'</b></button></li>').join('');
- $('.d3-note',host).textContent=room==='tecc2'?T('Kapasiti = 37 j seminggu (tolak rehat) × 27 minggu kuliah = 999 j.','Capacity = 37 h a week (excluding breaks) × 27 teaching weeks = 999 h.'):T('Jam tempahan diluluskan daripada log tempahan TECC 4.0 Digital EyeZ.','Approved booking hours from the TECC 4.0 Digital EyeZ booking log.');
+ $('.d3-note',host).textContent=room==='tecc2'?T('Kapasiti = 37 j seminggu (tolak rehat) × 27 minggu kuliah = 999 j.','Capacity = 37 h a week (excluding breaks) × 27 teaching weeks = 999 h.'):T('Jam tempahan diluluskan daripada log tempahan TECC 4.0. Faktor tahunan = 612.06 j ÷ 999 j = 61.3%, termasuk 72 j asas 2025 (makluman proses awal TECC 4.0).','Approved booking hours from the TECC 4.0 booking log. Annual factor = 612.06 h ÷ 999 h = 61.3%, including 72 h of 2025 foundation work (background on the early TECC 4.0 process).');
  function fit(){const s=Math.min(1,(stage.clientWidth-12)/(floorW*.92));stage.style.setProperty('--s',s.toFixed(3))}
  function apply(){fit();stage.style.setProperty('--ry',st.ry+'deg');stage.style.setProperty('--px',st.px+'deg')}
  function count(el,to,dec){if(reduce){el.textContent=fmt(to);return}const f=+el.dataset.v||0,t0=performance.now();el.dataset.v=to;(function s(t){const k=Math.min(1,(t-t0)/600),e=1-Math.pow(1-k,3);el.textContent=fmt(f+(to-f)*e);if(k<1)requestAnimationFrame(s)})(t0)}

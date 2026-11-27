@@ -37,7 +37,7 @@ const G=[
  ['plat','assets/gallery/cidos-polycc.webp',{bm:'Platform CIDOS POLYCC',en:'CIDOS POLYCC platform'}],
  ['plat','assets/gallery/micro-credential-polycc.webp',{bm:'Platform Micro-Credential POLYCC',en:'Micro-Credential POLYCC platform'}]];
 const G4=[
- ['room','assets/hero/tecc4.webp',{bm:'Studio TECC 4.0 Digital EyeZ',en:'TECC 4.0 Digital EyeZ studio'}],
+ ['room','assets/hero/tecc4.webp',{bm:'Studio TECC 4.0',en:'TECC 4.0 studio'}],
  ['room','assets/archi/archi-space-lab-overview.webp',{bm:'Makmal ARCHI-SPACE: pandangan keseluruhan',en:'ARCHI-SPACE lab overview'}],
  ['room','assets/archi/archi-space-lab-stations.webp',{bm:'Stesen VR dalam makmal',en:'VR stations in the lab'}],
  ['prog','assets/gallery/tecc4-bengkel-green-screen-rakaman.webp',{bm:'Rakaman Green Screen, Bengkel RMI Future, 2 Jul 2026',en:'Green screen recording, RMI Future workshop, 2 Jul 2026'}],

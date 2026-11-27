@@ -124,3 +124,15 @@ Dirujuk daripada repo/laman GitHub ARCHI-SPACE-by-PPD: CORR DCA40462, kajian ARC
 - TECC 4.0: galeri aktiviti #t4gallery, kolaj 3 slot, pautan folder Drive; foto tambahan: assets/activity/ID-2.webp.
 - Semakan bahasa: BM baku (papan pemuka, pengemasan, faktor penggunaan, jarak piksel, anda).
 V9.15: asas pembangunan 2025 (Kick Off 3 j, pemasangan 45 j, Simlab 16 j, latihan peralatan 8 j = 72 j; jumlah 612.06 j, 61.3%); bahagian KPI/SKT; foto ganti tanpa 404; favicon/og meta; alt ikon; sasaran sentuh 44px.
+V9.16: pelan bilik TECC 2.0 (tecc2 #t2plan); tangkapan skrin Canva dan Google Sites pada arkib2025; foto ARCHI-SPACE ditukar; teks kad indeks dibuang/diringkaskan.
+V9.17: pautan ARCHI-SPACE (slaid finalis, e-buku, video, poster); nama 'Digital EyeZ' ditukar kepada 'TECC 4.0' di seluruh laman.
+V9.18: carta organisasi Jawatankuasa e-Pembelajaran (index #org); Pengarah Roseman bin Mat Jidin @ Jidin, TPA Dr. Mohamad Siri bin Muslimin.
+V9.19: carta organisasi guna imej rekaan Jules (berkuat kuasa 14 Okt 2026) + versi teks.
+
+V9.20: Pelan TECC 2.0 sebenar (assets/layout/tecc2-pelan-bilik.webp) dirujuk dalam #zones; ARCHI-SPACE ditambah maklumat kursus/RMS DCA40462 (course outline, RMS Sesi II 2025/2026) dan ringkasan maklum balas pelajar (n=23, purata 4.49/5, 95.8% setuju, rating 4.91). Data: D.archi.course dan D.archi.fb.
+
+V9.21: Carta organisasi baharu (assets/org/carta-organisasi-2026.webp); versi teks: Admin CIDOS = Muhammad Yussuf bin Kamairuddin, Video = Izwan Kamal bin Abdul Wahab (avatar inisial). Slaid finalis AKRI baharu dalam PDF ringan 5 MB (assets/lampiran/akri2026-archi-space-slaid.pdf; pptx asal 91 MB tidak dimuat naik). Faktor TECC 4.0 kini pro rata: 612.06 j / (37 j x 34 minggu = 1,258 j) = 48.7% (27 minggu 2026 + 7 minggu asas 2025, 8 Jul-22 Ogos); sasaran 75% = 943.5 j. Teks lama "44.7%" dibetulkan.
+
+V9.22: Faktor TECC 4.0 dikembalikan kepada 61.3% (612.06 j / 999 j) atas arahan Jules; 72 j asas 2025 dipaparkan sebagai makluman proses awal TECC 4.0, dengan nota telus 2026 sahaja = 540.06 j (54.1%).
+
+V9.23: Nota yang berbunyi negatif tentang pengurusan bilik dibuang/dineutralkan (sementara, belum disahkan, semak pelaksanaan, belum dikira, pelan cadangan, nota 54.1%). Angka tidak diubah.
