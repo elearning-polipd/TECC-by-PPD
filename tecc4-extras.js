@@ -10,6 +10,7 @@ const G={
  c21:{f:'1aj21Wq7b_jgJ36uJLu2lGbNrkHWZTULK',p:['assets/activity/c21-kick-off.webp']},
  c22:{f:'1ctf9y98nIAuuvEnfub5b5f1o0sD3fRWf',p:['assets/activity/c22-pemasangan-led.webp','assets/activity/c22-bilik-sebelum.webp']},
  c23:{f:'1ctf9y98nIAuuvEnfub5b5f1o0sD3fRWf',p:[]},
+ c24:{f:'1LEfkbmAOVEdX8qGxJq2_PW13OyFOFEzR',p:[]},
  c1:{f:'1nDHPr08BH3rVpIVMiDM4KUe2TqvVsytH',p:['assets/lampiran/kursus-tecc-smart-teaching-21jan2026-video.webp','assets/lampiran/taklimat-tecc20-21jan2026-a.webp']},
  c2:{f:'1zviainl_cGrxSRnzTkCeNv46zrY4BONK',p:['assets/gallery/tecc4-bengkel-green-screen-rakaman.webp']},
  c3:{f:'1Y_YqmYzOkQrqq_IW8r60KsdddpaGKXwq',p:[]},

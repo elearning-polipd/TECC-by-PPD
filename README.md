@@ -136,3 +136,7 @@ V9.21: Carta organisasi baharu (assets/org/carta-organisasi-2026.webp); versi te
 V9.22: Faktor TECC 4.0 dikembalikan kepada 61.3% (612.06 j / 999 j) atas arahan Jules; 72 j asas 2025 dipaparkan sebagai makluman proses awal TECC 4.0, dengan nota telus 2026 sahaja = 540.06 j (54.1%).
 
 V9.23: Nota yang berbunyi negatif tentang pengurusan bilik dibuang/dineutralkan (sementara, belum disahkan, semak pelaksanaan, belum dikira, pelan cadangan, nota 54.1%). Angka tidak diubah.
+- V9.24: animated analytics dashboards (Usage Intelligence TECC 2.0, Immersive Learning Analytics TECC 4.0) with counters, gauges, filters, Replay, reduced-motion; 3D-motion Analisis. Files: dash-v10.css/js.
+- V9.25: Konvokesyen dates corrected to 4-15 Sep 2026 (90 h); added KK Bukit Beruang 15 Oct (8 h); TECC 4.0 totals 625.06 h / 62.6%; dashboards recoloured to platform palette.
+- V9.25b: Sabtu/Ahad Konvo 8 j confirmed (no longer an assumption).
+- V9.26: Utama shows TECC 2.0 (81.7%) and TECC 4.0 (62.6%) usage side by side with rings.
