@@ -6,7 +6,7 @@ const btn=document.getElementById('menu'),nav=document.getElementById('nav');
 const close=()=>{if(nav&&nav.classList.contains('open')){nav.classList.remove('open');btn&&btn.setAttribute('aria-expanded','false')}};
 nav&&nav.addEventListener('click',e=>{if(e.target.closest('a'))close()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
-document.addEventListener('click',e=>{if(nav&&!e.target.closest('#nav'))close()});
+document.addEventListener('click',e=>{if(nav&&!e.target.closest('#nav')&&!e.target.closest('#menu'))close()});
 const links=[...document.querySelectorAll('.reportnav a[href^="#"]')];
 if(links.length&&'IntersectionObserver' in window){const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
  const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){links.forEach(a=>{a.classList.remove('active');a.removeAttribute('aria-current')});const a=map.get(en.target.id);if(a){a.classList.add('active');a.setAttribute('aria-current','true');a.scrollIntoView({block:'nearest',inline:'center'})}}})},{rootMargin:'-30% 0px -60% 0px'});
