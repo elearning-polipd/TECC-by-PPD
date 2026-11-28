@@ -47,3 +47,12 @@
 
 .v13 #journey{background:none!important;padding:clamp(48px,7vw,88px) 0 0!important;border:0!important;box-shadow:none!important;border-radius:0!important}.v13 #journey h2{color:#15191b!important}
 .lp-archi{max-width:none}
+
+/* v22.1: text-only innovation link; facility photos live in Part 01. */
+.lp-i.lp-evidence-link{background:#f1ebff;color:#12302a;min-height:340px;transition:transform .25s,box-shadow .25s}
+.lp-i.lp-evidence-link::after{display:none}
+.lp-i.lp-evidence-link:hover{transform:translateY(-4px);box-shadow:0 12px 28px #c9b6f755}
+.lp-i.lp-evidence-link .lp-tag{color:#12302a;background:#c9b6f7}
+.lp-i.lp-evidence-link:focus-visible{outline:3px solid #12302a;outline-offset:3px}
+@media(max-width:560px){.lp-i.lp-evidence-link{min-height:220px}}
+@media(prefers-reduced-motion:reduce){.lp-i.lp-evidence-link{transition:none}.lp-i.lp-evidence-link:hover{transform:none}}

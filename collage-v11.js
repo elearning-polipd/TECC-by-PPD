@@ -75,7 +75,7 @@ d5:P('assets/activity/c3-bipd-kamera-360.webp','','29 Apr 2026','Lawatan BIPD: d
 d6:P('assets/activity/c3-bipd-lawatan-makmal-2.webp','','29 Apr 2026','Lawatan BIPD: delegasi di makmal dan ruang pameran pencapaian','BIPD visit: the delegation in the lab and achievements display area','pend',''),
 d7:P('assets/activity/c3-bipd-skrin-dewan.webp','','29 Apr 2026','Lawatan BIPD: paparan eLearning POLIPD pada skrin interaktif di dewan','BIPD visit: the POLIPD eLearning platform on the interactive screen in the hall','pend','')};
 var M={t2:[],
-t4:[A.b1,A.b3,A.b4,A.jg,A.b2,A.b5,A.d1,A.d2,A.d3,A.d4,A.d5,A.d6,A.d7,A.jd,A.jo,A.rl,A.ro,A.rk,A.ra,A.k5,A.k3,A.k1,A.k6,A.k4,A.k2,A.f1,A.f2,A.f4,A.f3],
+t4:[A.b1,A.b3,A.b4,A.jg,A.b2,A.b5,A.d1,A.d2,A.d3,A.d4,A.d5,A.d6,A.d7,A.jd,A.jo,A.rl,A.ro,A.rk,A.ra,A.k5,A.k3,A.k1,A.k6,A.k4,A.k2],
 home:[A.i1,A.i2,A.i5,A.i4,A.i6,A.i7,A.i8],
 arc:[A.pm,A.p2,A.p3,A.t1,A.t2,A.t3,A.t4,A.v1,A.v2,A.v3,A.v4,A.v5,A.a5,A.a4],
 lamp:[]};
