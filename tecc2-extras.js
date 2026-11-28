@@ -23,28 +23,11 @@ function utility(){const host=$('#utility');if(!host)return;const hs=$('.herosta
  const g=$('.gauge',div),st=$('.ustack',div);if(io){io.observe(div);const o2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){g.classList.add('in');st.classList.add('in');o2.disconnect()}}),{threshold:.2});o2.observe(div)}else{g.classList.add('in');st.classList.add('in');countUp(div)}
  if(reduce){g.classList.add('in');st.classList.add('in')}}
 const G=[
- ['room','assets/hero/tecc2.webp',{bm:'Ruang TECC 2.0',en:'TECC 2.0 room'}],
- ['room','assets/gallery/tecc2-ruang.webp',{bm:'Susun atur meja modular',en:'Modular table layout'}],
- ['prog','assets/lampiran/taklimat-tecc20-21jan2026-a.webp',{bm:'Taklimat TECC 2.0, 21 Jan 2026',en:'TECC 2.0 briefing, 21 Jan 2026'}],
- ['prog','assets/lampiran/taklimat-tecc20-21jan2026-b.webp',{bm:'Penyampai dalam bilik TECC 2.0',en:'Presenter in the TECC 2.0 room'}],
- ['prog','assets/lampiran/kursus-tecc-smart-teaching-21jan2026-video.webp',{bm:'Kursus TECC Smart Teaching',en:'TECC Smart Teaching course'}],
- ['prog','assets/lampiran/susun-atur-ujian-muet-apr2026.webp',{bm:'Susun atur bilik Ujian Lisan MUET, Apr 2026',en:'Room layout for the MUET Speaking Test, Apr 2026'}],
- ['room','assets/gallery/tecc2-sesi-1.webp',{bm:'Sesi taklimat di ruang',en:'Briefing session in the room'}],
- ['room','assets/gallery/tecc2-sesi-2.webp',{bm:'Pembentangan latar belakang TECC 2.0',en:'TECC 2.0 background presentation'}],
- ['room','assets/gallery/tecc2-bilik-kolaboratif.webp',{bm:'Susun atur bilik untuk kerja berkumpulan',en:'Room layout for group work'}],
- ['prog','assets/gallery/tecc2-perjumpaan-staf-jun2026.webp',{bm:'Perjumpaan staf JPA di TECC 2.0, Jun 2026',en:'JPA staff gathering in TECC 2.0, Jun 2026'}],
- ['prog','assets/gallery/tecc2-mesyuarat-jpa-jun2026.webp',{bm:'Warga JPA bersama di TECC 2.0',en:'JPA colleagues together in TECC 2.0'}],
  ['plat','assets/gallery/cidos-polycc.webp',{bm:'Platform CIDOS POLYCC',en:'CIDOS POLYCC platform'}],
  ['plat','assets/gallery/micro-credential-polycc.webp',{bm:'Platform Micro-Credential POLYCC',en:'Micro-Credential POLYCC platform'}]];
 const G4=[
- ['room','assets/hero/tecc4.webp',{bm:'Studio TECC 4.0',en:'TECC 4.0 studio'}],
- ['room','assets/archi/archi-space-lab-overview.webp',{bm:'Makmal ARCHI-SPACE: pandangan keseluruhan',en:'ARCHI-SPACE lab overview'}],
- ['room','assets/archi/archi-space-lab-stations.webp',{bm:'Stesen VR dalam makmal',en:'VR stations in the lab'}],
- ['prog','assets/gallery/tecc4-bengkel-green-screen-rakaman.webp',{bm:'Rakaman Green Screen, Bengkel RMI Future, 2 Jul 2026',en:'Green screen recording, RMI Future workshop, 2 Jul 2026'}],
- ['prog','assets/gallery/tecc4-bengkel-rmi-future-penyampaian.webp',{bm:'Majlis penutup Bengkel RMI Future',en:'RMI Future workshop closing ceremony'}],
- ['prog','assets/gallery/tecc4-bengkel-rmi-future-sijil.webp',{bm:'Sijil penghargaan SMK Bandar Baru Sri Sendayan',en:'Certificate of appreciation, SMK Bandar Baru Sri Sendayan'}],
- ['prog','assets/archi/vr-session-lecturer-guidance.webp',{bm:'Sesi VR: bimbingan pensyarah',en:'VR session: lecturer guidance'}],
- ['prog','assets/archi/vr-session-multi-station.webp',{bm:'Sesi VR berbilang stesen',en:'Multi-station VR session'}]];
+ ['prog','assets/activity/p2-ulpl-4.webp',{bm:'Bengkel Video AI: sesi pembentangan di dewan ULPL',en:'AI video workshop: presentation session at the ULPL hall'}],
+ ['prog','assets/activity/p2-ulpl-5.webp',{bm:'Bengkel Video AI: paparan hasil dan bahan bengkel',en:'AI video workshop: output and workshop material on screen'}]];
 const CAT={all:{bm:'Semua',en:'All'},room:{bm:'Ruang',en:'Room'},prog:{bm:'Program',en:'Programmes'},plat:{bm:'Platform digital',en:'Digital platforms'}};
 let cat='all';
 function gallery(){const host=$('#gal2')||$('#gal4');if(!host)return;const G_=host.id==='gal4'?G4:G;

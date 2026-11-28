@@ -51,14 +51,36 @@ v1:P('assets/activity/p4-pengarah-cuba-vr-1.webp','E77','Okt 2025','Pengarah men
 v2:P('assets/activity/p4-podcast-skrin-hijau.webp','E77','Okt 2025','Rakaman podcast Pengarah dan Pengarah Kanan Kompetensi JPPKK di studio skrin hijau','Podcast recording with the Director and the JPPKK Senior Director (Competency) in the green-screen studio','ok','4'),
 v3:P('assets/activity/p4-pengarah-demonstrasi-vr.webp','E77','Okt 2025','Demonstrasi VR kepada Pengarah, dengan skrin paparan rakaman di belakang','VR demonstration for the Director with the display screen behind','ok','4'),
 v4:P('assets/activity/p4-pengarah-vr-simulasi.webp','E77','Okt 2025','Pengarah mencuba simulasi VR; paparan pada skrin menunjukkan persekitaran latihan','The Director trying a VR simulation, mirrored on the screen','ok','4'),
-v5:P('assets/activity/p4-pengarah-vr-senyum.webp','E77','Okt 2025','Pengarah dengan set VR dan alat kawalan di zon rumput TECC 4.0','The Director with a VR headset and controllers on the TECC 4.0 turf zone','ok','4')};
-var M={t2:[A.s1,A.kl,A.tk,A.rg,A.pj,A.mj,A.mu,A.kv],
-t4:[A.ms,A.gs,A.gu,A.rj,A.rl,A.ro,A.rk,A.ra,A.jo,A.jd,A.jg,A.rp,A.ak,A.go,A.oh,A.f1,A.ov,A.f2,A.f4,A.f3,A.k5,A.k6,A.k3,A.k1,A.k4,A.k2],
-home:[A.st,A.rg,A.rp,A.mu,A.ak,A.pj],
-arc:[A.ko,A.pm,A.p2,A.p3,A.t1,A.t2,A.v1,A.v2,A.v3,A.v4,A.v5,A.a5,A.a4],
-lamp:[A.kv,A.sj,A.pj,A.mu,A.tk]};
+v5:P('assets/activity/p4-pengarah-vr-senyum.webp','E77','Okt 2025','Pengarah dengan set VR dan alat kawalan di zon rumput TECC 4.0','The Director with a VR headset and controllers on the TECC 4.0 turf zone','ok','4'),
+t3:P('assets/activity/p1-pemasangan-pelekat-3.webp','E44','1 Nov 2025','Pemasang melekatkan pelekat Digital EyeZ pada pintu kaca','Installers fitting the Digital EyeZ sticker on the glass door','ok','4'),
+t4:P('assets/activity/p1-pemasangan-pelekat-4.webp','E44','1 Nov 2025','Pemasangan filem dan pelekat pintu dari dalam bilik','Door film and sticker installation from inside the room','ok','4'),
+i1:P('assets/activity/p4-pandu-vr-1.webp','E77','Okt 2025','Pegawai membimbing Pengarah menggunakan alat kawalan VR','Staff guiding the Director with the VR controllers','ok','4'),
+i2:P('assets/activity/p4-pandu-vr-2.webp','E77','Okt 2025','Percubaan VR oleh Pengarah, paparan OBS di skrin belakang','The Director trying VR with the OBS display on the screen behind','ok','4'),
+i3:P('assets/gallery/idx-penonton-skrin.webp','','','Peserta mengikuti sesi di zon pembelajaran TECC 4.0','Participants following a session in the TECC 4.0 learning zone','pend','4'),
+i5:P('assets/gallery/idx-pensyarah-sesi.webp','','','Swafoto pensyarah dalam sesi (program belum dikenal pasti)','Lecturer selfie during a session (programme not yet identified)','pend',''),
+i6:P('assets/gallery/idx-sesi-ramah.webp','','','Peserta program selepas sesi (program belum dikenal pasti)','Participants after a session (programme not yet identified)','pend',''),
+i7:P('assets/gallery/idx-cenderamata-1.webp','','','Penyampaian cenderamata kepada penceramah (program belum dikenal pasti)','Presentation of a token to a speaker (programme not yet identified)','pend',''),
+i8:P('assets/gallery/idx-cenderamata-2.webp','','','Penyampaian cenderamata kepada penceramah (program belum dikenal pasti)','Presentation of a token to a speaker (programme not yet identified)','pend',''),
+i4:P('assets/gallery/idx-lawatan-studio.webp','','','Lawatan dan perbincangan di studio TECC 4.0','A visit and discussion in the TECC 4.0 studio','pend','4'),
+b1:P('assets/activity/c24-grup-tecc40-banner.webp','','15 Okt 2026','Pelajar Kolej Komuniti Bukit Beruang bersama pensyarah di bawah banner sambutan TECC 4.0','Kolej Komuniti Bukit Beruang students with lecturers beside the TECC 4.0 welcome banner','pend','4'),
+b2:P('assets/activity/c24-grup-ceria.webp','','15 Okt 2026','Lawatan penilaian Kursus Penyelenggaraan Kenderaan Hybrid dan Elektrik di Bilik TECC 4.0','Assessment visit for the Hybrid and Electric Vehicle Maintenance course in the TECC 4.0 room','pend','4'),
+b3:P('assets/activity/c24-pelajar-vr-pensyarah.webp','','15 Okt 2026','Pelajar mencuba headset VR di stesen TECC 4.0 sambil diperhatikan pensyarah','A student trying a VR headset at the TECC 4.0 stations while a lecturer watches','pend','4'),
+b4:P('assets/activity/c24-pelajar-skrin-xr.webp','','15 Okt 2026','Pelajar melihat paparan XR pada skrin stesen TECC 4.0','Students watching the XR display on a TECC 4.0 station screen','pend','4'),
+b5:P('assets/activity/c24-ketibaan-kumpulan.webp','','15 Okt 2026','Rombongan pelajar dan pensyarah di pintu masuk bengkel sebelum lawatan ke TECC 4.0','Students and lecturers at the workshop entrance before the TECC 4.0 visit','pend','4'),
+d1:P('assets/activity/c3-bipd-skrin-elearning.webp','','29 Apr 2026','Lawatan BIPD: penerangan tentang platform eLearning POLIPD pada paparan interaktif','BIPD visit: briefing on the POLIPD eLearning platform on the interactive display','pend',''),
+d2:P('assets/activity/c3-bipd-taklimat-dewan.webp','','29 Apr 2026','Lawatan BIPD: taklimat kepada delegasi di dewan kuliah','BIPD visit: briefing to the delegation in the lecture hall','pend',''),
+d3:P('assets/activity/c3-bipd-makmal.webp','','29 Apr 2026','Lawatan BIPD: delegasi melawat makmal dan pameran pencapaian','BIPD visit: the delegation touring the lab and achievements display','pend',''),
+d4:P('assets/activity/c3-bipd-pemerhatian-kelas.webp','','29 Apr 2026','Lawatan BIPD: delegasi memerhati sesi pengajaran','BIPD visit: the delegation observing a teaching session','pend',''),
+d5:P('assets/activity/c3-bipd-kamera-360.webp','','29 Apr 2026','Lawatan BIPD: demonstrasi kamera 360 darjah','BIPD visit: demonstration of a 360-degree camera','pend',''),
+d6:P('assets/activity/c3-bipd-lawatan-makmal-2.webp','','29 Apr 2026','Lawatan BIPD: delegasi di makmal dan ruang pameran pencapaian','BIPD visit: the delegation in the lab and achievements display area','pend',''),
+d7:P('assets/activity/c3-bipd-skrin-dewan.webp','','29 Apr 2026','Lawatan BIPD: paparan eLearning POLIPD pada skrin interaktif di dewan','BIPD visit: the POLIPD eLearning platform on the interactive screen in the hall','pend','')};
+var M={t2:[],
+t4:[A.b1,A.b3,A.b4,A.jg,A.b2,A.b5,A.d1,A.d2,A.d3,A.d4,A.d5,A.d6,A.d7,A.jd,A.jo,A.rl,A.ro,A.rk,A.ra,A.k5,A.k3,A.k1,A.k6,A.k4,A.k2,A.f1,A.f2,A.f4,A.f3],
+home:[A.i1,A.i2,A.i5,A.i4,A.i6,A.i7,A.i8],
+arc:[A.pm,A.p2,A.p3,A.t1,A.t2,A.t3,A.t4,A.v1,A.v2,A.v3,A.v4,A.v5,A.a5,A.a4],
+lamp:[]};
 var page=(location.pathname.split('/').pop()||'index.html').replace('.html','');
-var set=page==='tecc2'?M.t2:page==='tecc4'?M.t4:page==='lampiran'?M.lamp:page==='arkib2025'?M.arc:M.home;
+var set=page==='tecc2'?M.t2:page==='tecc4'?M.t4:page==='lampiran'?M.lamp:page==='panduan'?[]:page==='arkib2025'?M.arc:M.home;
 var seen={};set=set.filter(function(p){if(seen[p.f])return false;seen[p.f]=1;return true});
 var T={
  h:{bm:'Aktiviti dan bukti dalam gambar',en:'Activities and evidence in pictures'},
@@ -69,9 +91,9 @@ function lang(){return document.documentElement.lang==='en'?'en':'bm'}
 function build(){
  var l=lang(),s=document.createElement('section');s.className='wrap cg';s.id='kolaj';
  var h='<span class="kicker">'+(l==='en'?'Photo collage':'Kolaj foto')+'</span><h2>'+T.h[l]+'</h2><p class="cg-lead">'+T.l[l]+'</p><div class="cg-grid">';
- set.forEach(function(p){h+='<figure class="cg-i"><img src="'+p.f+'" alt="'+p[l]+'" loading="lazy" decoding="async"><span class="cg-room r'+p.t+'">TECC '+(p.t==='2'?'2.0':'4.0')+'</span><span class="cg-tag '+p.tag+'">'+T[p.tag][l]+(p.id?' · '+p.id:'')+'</span><figcaption><b>'+p[l]+'</b>'+(p.d||'')+'</figcaption></figure>'});
+ set.forEach(function(p){h+='<figure class="cg-i"><img src="'+p.f+'" alt="'+p[l]+'" loading="lazy" decoding="async">'+(p.t==='2'||p.t==='4'?'<span class="cg-room r'+p.t+'">TECC '+(p.t==='2'?'2.0':'4.0')+'</span>':'')+'<span class="cg-tag '+p.tag+'">'+T[p.tag][l]+(p.id?' · '+p.id:'')+'</span><figcaption><b>'+p[l]+'</b>'+(p.d||'')+'</figcaption></figure>'});
  var r=(set.length-4)%3;s.dataset.r=set.length>4?r:0;s.innerHTML=h+'</div><p class="cg-note">'+T.n[l]+'</p>';return s}
-function mount(){var old=document.getElementById('kolaj');var n=build();if(old)old.replaceWith(n);else{var f=document.querySelector('footer');f.parentNode.insertBefore(n,f)}}
+function mount(){if(!set.length)return;var old=document.getElementById('kolaj');var n=build();if(old)old.replaceWith(n);else{var f=document.querySelector('footer');f.parentNode.insertBefore(n,f)}}
 mount();
 new MutationObserver(mount).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
 })();

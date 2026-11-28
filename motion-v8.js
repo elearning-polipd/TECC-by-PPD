@@ -21,7 +21,7 @@ function observe(){$$('.chhead').forEach(h=>{if(!h.classList.contains('m8-in')){
 
 /* photo ribbon on the homepage */
 function ribbon(){const m=$('.marquee');if(!m||$('.pstrip'))return;
- const P=[['assets/gallery/tecc2-bilik-kolaboratif.webp','TECC 2.0'],['assets/archi/vr-session-multi-station.webp','VR'],['assets/gallery/tecc4-bengkel-green-screen-rakaman.webp','Green Screen'],['assets/gallery/tecc2-perjumpaan-staf-jun2026.webp','JPA'],['assets/archi/archi-space-lab-overview.webp','ARCHI-SPACE'],['assets/lampiran/taklimat-tecc20-21jan2026-a.webp','Taklimat'],['assets/archi/vr-session-lecturer-guidance.webp','Bimbingan VR'],['assets/gallery/tecc2-sesi-2.webp','Pembentangan'],['assets/gallery/tecc4-bengkel-rmi-future-penyampaian.webp','RMI Future']];
+ const P=[['assets/gallery/idx-sesi-skrin-led.webp','Sesi LED'],['assets/gallery/idx-sesi-ramah.webp','Bersama'],['assets/gallery/idx-pensyarah-sesi.webp','Pensyarah'],['assets/gallery/idx-cenderamata-1.webp','Cenderamata'],['assets/gallery/idx-cenderamata-2.webp','Penghargaan']];
  const one=P.map(p=>'<figure><img loading="lazy" decoding="async" alt="" src="'+p[0]+'"><figcaption>'+p[1]+'</figcaption></figure>').join('');
  const s=document.createElement('section');s.className='pstrip';s.setAttribute('aria-hidden','true');s.innerHTML='<div class="pstrip-track">'+one+one+'</div>';
  m.parentNode.insertBefore(s,m.nextSibling);if(reduce)s.style.display='none'}

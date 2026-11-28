@@ -7,27 +7,28 @@ const MON={bm:['Jan','Feb','Mac','Apr','Mei','Jun','Jul','Ogo','Sep','Okt','Nov'
 const F=id=>'https://drive.google.com/drive/folders/'+id;
 const G={
  c9:{f:'1QTxyzNGgwvJM74LGEwzKmr8ZL1Q4K6jo',p:[]},
- c21:{f:'1aj21Wq7b_jgJ36uJLu2lGbNrkHWZTULK',p:['assets/activity/c21-kick-off.webp']},
- c22:{f:'1ctf9y98nIAuuvEnfub5b5f1o0sD3fRWf',p:['assets/activity/c22-pemasangan-led.webp','assets/activity/c22-bilik-sebelum.webp']},
+ c21:{f:'1aj21Wq7b_jgJ36uJLu2lGbNrkHWZTULK',p:[]},
+ c22:{f:'1ctf9y98nIAuuvEnfub5b5f1o0sD3fRWf',p:[]},
  c23:{f:'1ctf9y98nIAuuvEnfub5b5f1o0sD3fRWf',p:[]},
  c24:{f:'1LEfkbmAOVEdX8qGxJq2_PW13OyFOFEzR',p:[]},
- c1:{f:'1nDHPr08BH3rVpIVMiDM4KUe2TqvVsytH',p:['assets/lampiran/kursus-tecc-smart-teaching-21jan2026-video.webp','assets/lampiran/taklimat-tecc20-21jan2026-a.webp']},
+ c1:{f:'1nDHPr08BH3rVpIVMiDM4KUe2TqvVsytH',p:[]},
  c2:{f:'1zviainl_cGrxSRnzTkCeNv46zrY4BONK',p:['assets/gallery/tecc4-bengkel-green-screen-rakaman.webp']},
  c3:{f:'1Y_YqmYzOkQrqq_IW8r60KsdddpaGKXwq',p:[]},
  c4:{f:'1WXOkVULeqynMI0Kv1zwbgirXdvUbrV88',p:[]},
  c5:{f:'',p:['assets/gallery/tecc4-bengkel-rmi-future-penyampaian.webp','assets/gallery/tecc4-bengkel-rmi-future-sijil.webp']},
- c6:{f:'1HFR5JTh7Y1BCTcRqi6AHjt81sw6luqcO',p:['assets/activity/c6-bengkel-prep-akri.webp']},
+ c6:{f:'1HFR5JTh7Y1BCTcRqi6AHjt81sw6luqcO',p:['assets/activity/c6-bengkel-prep-akri.webp','assets/activity/c6-sesi-meja-1.webp','assets/activity/c6-sesi-meja-2.webp','assets/activity/c6-pasukan-sudut-kawalan.webp','assets/activity/c6-arif-hotel-kl.webp']},
  c7:{f:'',p:[]},
  c8:{f:'1EenEN4ae0UcLUxo9QeLG3Ns5JSnWdohJ',p:[]},
  c10:{f:'18V-4MLoeEtE0atj1WCVJ9Pcij99RPaKi',p:[]},
- c11:{f:'1tWkxby44r7wnofTUfqcc44nAStFkC-yU',p:['assets/archi/archi-space-lab-overview.webp','assets/archi/vr-session-multi-station.webp','assets/archi/vr-session-lecturer-guidance.webp']},
+ c11:{f:'1tWkxby44r7wnofTUfqcc44nAStFkC-yU',p:['assets/archi/archi-vr-orientasi-stesen.webp','assets/archi/archi-vr-demonstrasi-terbuka.webp']},
  c12:{f:'1PGjrbkz7N2Vev9-hZxHPpta7VaL1gP9h',p:['assets/activity/c12-raya-jpa.webp']},
  c14:{f:'1yaFTJUcYp8qzN9IqkPyx8h8yCoCaaZHm',p:[]},
  c15:{f:'1I6rknumyIm3oU1yRN6qJ1gKF7PR1jcVs',p:[]},
  c16:{f:'1lIS-mfxaPiRTJQrPJn6AOiT5Ze1KsT6G',p:[]},
- c17:{f:'1RdejKF-hm4USfKRjhR-HSdKa9SUpHpwy',p:['assets/activity/c17-konvo.webp']},
+ c17:{f:'1RdejKF-hm4USfKRjhR-HSdKa9SUpHpwy',p:['assets/activity/c17-konvo.webp','assets/activity/c17-jubah-vvip.webp','assets/activity/c17-cetakan-foto.webp']},
  c18:{f:'1z7Jvf8CV-DDsrEKKj0xN4HwykU-Kdeb1',p:[]},
- c19:{f:'1z7Jvf8CV-DDsrEKKj0xN4HwykU-Kdeb1',p:[]}
+ c19:{f:'1z7Jvf8CV-DDsrEKKj0xN4HwykU-Kdeb1',p:[]},
+ p2:{f:'1zUfM2JvI3w6bMZjRiwYbc7YUMsWwMyao',p:['assets/activity/p2-ulpl-1.webp','assets/activity/p2-ulpl-2.webp','assets/activity/p2-ulpl-3.webp']}
 };
 function draw(l){
  const en=l==='en',L=o=>o?(en?o.en:o.bm):'';
@@ -50,7 +51,7 @@ function draw(l){
  if(gl){
   const acts=D.activities.filter(a=>a.room==='tecc4'&&G[a.id]).sort((a,b)=>a.sort<b.sort?-1:1);
   const slot=(a,i,src)=>{if(!src)return '<div class="ph '+(i===0?'main':'')+'">'+T('Foto','Photo')+' '+(i+1)+'</div>';const s=src;return '<img class="'+(i===0?'main':'')+'" src="'+s+'" alt="'+esc(L(a.title))+'" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'ph '+(i===0?'main':'')+'\\\'>'+T('Foto','Photo')+' '+(i+1)+'</div>\'"/>'};
-  gl.innerHTML='<div class="wrap"><div class="section-num">'+T('GALERI AKTIVITI','ACTIVITY GALLERY')+'</div><h2>'+T('Foto dan kolaj mengikut aktiviti','Photos and collage by activity')+'</h2><p class="lead">'+T('Setiap aktiviti dipautkan kepada folder Google Drive e-Pembelajaran. Ruang kosong ialah tempat foto tambahan.','Each activity links to its e-Learning Google Drive folder. Empty frames are placeholders for more photos.')+'</p><div class="actgal">'+acts.map(a=>{const g=G[a.id];const ps=[0,1,2].map(i=>slot(a,i,g.p[i])).join('');return '<article class="actcard"><div class="col">'+ps+'</div><div class="meta"><b>'+esc(L(a.title))+'</b><small>'+esc(L(a.date))+(a.h!=null?' · '+a.h+' '+T('jam','h'):'')+'</small>'+(g.f?'<a href="'+F(g.f)+'" target="_blank" rel="noopener">'+T('Buka folder Drive ↗','Open Drive folder ↗')+'</a>':'<small>—</small>')+'</div></article>'}).join('')+'</div></div>';
+  gl.innerHTML='<div class="wrap"><div class="section-num">'+T('GALERI AKTIVITI','ACTIVITY GALLERY')+'</div><h2>'+T('Foto dan kolaj mengikut aktiviti','Photos and collage by activity')+'</h2><p class="lead">'+T('Setiap aktiviti dipautkan kepada folder Google Drive e-Pembelajaran. Foto ditambah apabila diterima daripada penyelaras.','Each activity links to its e-Learning Google Drive folder. Photos are added as they are received from the coordinator.')+'</p><div class="actgal">'+acts.map(a=>{const g=G[a.id];const ph=g.p.slice(0,3);const ps=ph.map((x,i)=>slot(a,i,x)).join('');return '<article class="actcard">'+(ph.length?'<div class="col n'+ph.length+'">'+ps+'</div>':'')+'<div class="meta"><b>'+esc(L(a.title))+'</b><small>'+esc(L(a.date))+(a.h!=null?' · '+a.h+' '+T('jam','h'):'')+'</small>'+(g.f?'<a href="'+F(g.f)+'" target="_blank" rel="noopener">'+T('Buka folder Drive ↗','Open Drive folder ↗')+'</a>':'<small>—</small>')+'</div></article>'}).join('')+'</div></div>';
  }
 }
 const orig=window.TECC_RENDER;

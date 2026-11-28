@@ -1,0 +1,48 @@
+/* v10.1 — "What is TECC" + Guidelines & star rating. Removable: delete this file and its <link>. */
+.guide-what,.guide-kpi{background:#fff;padding:clamp(18px,3vw,36px);border-radius:26px;border:1px solid #e3e8dc}
+.guide-what{background:#f4f1e8}
+.guide-what h2,.guide-kpi h2{max-width:20ch}
+.gw-intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:start}
+.gw-intro .lead{margin:0;font-size:clamp(15px,1.5vw,18px);color:#43574f;line-height:1.65}
+.gw-chips{display:flex;flex-wrap:wrap;gap:8px}
+.gw-chips span{padding:9px 15px;border-radius:30px;background:#d6eaa9;color:#203d2c;font-size:13px;font-weight:700}
+.gw-chips .gw-neq{background:#fff;border:1px dashed #9aa890;color:#55644d}
+.gw-sub{font:800 clamp(18px,2vw,23px) Manrope,Arial,sans-serif;letter-spacing:-.03em;margin:34px 0 14px}
+.gw-spaces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gw-card{display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:20px;min-width:0}
+.gw-card h4{font:800 clamp(20px,2.2vw,27px) Manrope,Arial,sans-serif;letter-spacing:-.04em;line-height:1.1;margin:0}
+.gw-card p{margin:0;font-size:14px;line-height:1.55}
+.gw-c2{background:#dcebb6;color:#203d2c}.gw-c4{background:#e0d2fa;color:#3b2561}.gw-c5{background:#f3d2bd;color:#5e3321}
+.gw-tag{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:30px;background:#ffffffa8}
+.gw-list{margin:2px 0 6px;padding-left:18px;font-size:13px;line-height:1.5}.gw-list li{margin:3px 0}
+.gw-go{margin-top:auto;font-size:13px;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.gk-targets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.gk-t{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:18px;font-size:13px;font-weight:700}
+.gk-t strong{font:800 clamp(34px,4.5vw,56px) Manrope,Arial,sans-serif;letter-spacing:-.06em;line-height:1}
+.gk-t small{font-size:12px;font-weight:600;opacity:.85}
+.gk-t.t1{background:#dcebb6;color:#203d2c}.gk-t.t2{background:#e0d2fa;color:#3b2561}.gk-t.t3{background:#f3d2bd;color:#5e3321}
+.gk-rate{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.gk-room{display:flex;flex-direction:column;gap:12px;padding:20px;border-radius:18px;background:#f6f6f0}
+.gk-room>b{font:800 20px Manrope,Arial,sans-serif;letter-spacing:-.03em}
+.gb-bar{display:flex;gap:4px;min-height:92px}
+.gb-seg{display:flex;flex-direction:column;justify-content:space-between;padding:10px;border-radius:12px;min-width:0;font-size:11px;line-height:1.25}
+.gb-seg b{font:800 clamp(18px,2.4vw,26px) Manrope,Arial,sans-serif;letter-spacing:-.04em}
+.gb-seg{min-width:82px}.gb-seg span{overflow-wrap:normal;word-break:normal;hyphens:none}
+.e1{background:#116b5b;color:#fff}.e2{background:#8055be;color:#fff}.e3{background:#e9a35c;color:#3a2410}.e4{background:#d6eaa9;color:#203d2c}
+.gd{font-size:13px}.gd summary{cursor:pointer;font-weight:800;padding:6px 0}.gd summary:focus-visible,.gw-go:focus-visible,.gk-map a:focus-visible{outline:3px solid #f0ba46;outline-offset:3px;border-radius:6px}
+.gd ul{margin:6px 0 0;padding-left:18px;line-height:1.5}.gd li{margin:5px 0}
+.gk-stars{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:14px}
+.gk-stars>div{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 6px;border-radius:14px;background:#fbf5ee;border:1px solid #eadfce}
+.gk-stars b{color:#c8861b;letter-spacing:1px;font-size:14px}.gk-stars span{font-size:13px;font-weight:700}
+.gk-ladder{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.gk-ladder li{display:flex;flex-direction:column;gap:5px;padding:16px 12px;border-radius:16px;background:#f6f6f0;border:1px solid #e6e6dc;position:relative}
+.gk-ladder li:nth-child(2){margin-top:-6px}.gk-ladder li:nth-child(3){margin-top:-12px}.gk-ladder li:nth-child(4){margin-top:-18px}.gk-ladder li:nth-child(5){margin-top:-24px}
+.gk-ladder b{font:800 15px Manrope,Arial,sans-serif;letter-spacing:.04em}.gk-ladder span{font-size:12px;font-weight:700}.gk-ladder small{font-size:11px;color:#5d6358}
+.gk-ladder li.now{background:#d6eaa9;border-color:#116b5b;box-shadow:0 0 0 2px #116b5b33}
+.gk-ladder li.now:after{content:'2026';position:absolute;top:-10px;right:10px;font-size:10px;font-weight:800;letter-spacing:.08em;background:#116b5b;color:#fff;padding:3px 8px;border-radius:20px}
+.gk-map{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.gk-map a{display:flex;flex-direction:column;gap:5px;padding:16px;border-radius:16px;background:#f6f6f0;border:1px solid #e6e6dc;transition:transform .2s,background .2s}
+.gk-map a:hover{transform:translateY(-3px);background:#eef3e1}.gk-map b{font-size:14px}.gk-map span{font-size:12px;color:#56604f;line-height:1.4}
+@media(max-width:980px){.gw-spaces{grid-template-columns:1fr}.gw-intro{grid-template-columns:1fr}.gk-map{grid-template-columns:repeat(2,minmax(0,1fr))}.gk-ladder{grid-template-columns:1fr}.gk-ladder li{margin-top:0!important}}
+@media(max-width:700px){.gb-bar{flex-direction:column;min-height:0}.gb-seg{flex-direction:row;align-items:center;justify-content:flex-start;gap:12px;min-width:0;padding:10px 12px}.gb-seg b{min-width:48px}.gk-targets,.gk-rate{grid-template-columns:1fr}.gk-stars{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}.gk-stars b{font-size:10px;letter-spacing:0}.gk-stars span{font-size:11px}.gk-map{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.gk-map a{transition:none}}
