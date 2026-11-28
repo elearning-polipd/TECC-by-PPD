@@ -1,0 +1,112 @@
+[
+  {
+    "alias": "t2-hero.webp",
+    "canonical": "assets/hero/tecc2.webp",
+    "evidence": "E78",
+    "hours": 0,
+    "verification": "visual_match_checked",
+    "capture_date": null,
+    "original_source_url": null,
+    "scope": "facility_only",
+    "sha256": "1ff3280da513120d5e2654b65f140ac689a3bafa3609f3c7b30fde835801ca06"
+  },
+  {
+    "alias": "t4-hero.webp",
+    "canonical": "assets/gallery/tecc4-kemudahan-pandangan-bilik.webp",
+    "evidence": "E60",
+    "hours": 0,
+    "verification": "visual_match_checked",
+    "capture_date": null,
+    "original_source_url": null,
+    "scope": "facility_only",
+    "sha256": "4eb4085f7964b0e2418179bcee4e6b4ffedadb36c420bafc3c8d57338292ce5f"
+  },
+  {
+    "alias": "t4-vr.webp",
+    "canonical": "assets/gallery/idx-tiga-stesen.webp",
+    "evidence": "E79",
+    "hours": 0,
+    "verification": "visual_match_checked",
+    "capture_date": null,
+    "original_source_url": null,
+    "scope": "facility_only",
+    "sha256": "94480a65dc792e88cbe6d180dedbc97fa8f02081fc43df27aaca440263536f8f"
+  },
+  {
+    "alias": "t4-explore.webp",
+    "canonical": "assets/gallery/idx-stesen-vr-lebar.webp",
+    "evidence": "E79",
+    "hours": 0,
+    "verification": "visual_match_checked",
+    "capture_date": null,
+    "original_source_url": null,
+    "scope": "facility_only",
+    "sha256": "3e72831d4629043ad5cafece1ea4895731d1a056cbee638918111a3a75547bfc"
+  },
+  {
+    "alias": "t4-studio.webp",
+    "canonical": "assets/gallery/tecc4-kemudahan-studio-skrin-hijau.webp",
+    "evidence": "E60",
+    "hours": 0,
+    "verification": "visual_match_checked",
+    "capture_date": null,
+    "original_source_url": null,
+    "scope": "facility_only",
+    "sha256": "d17cb7a69ac36bedcfbd9cf5612ea72b9a94a3ace0bc6ead65a2093557e5015d"
+  },
+  {
+    "alias": "t4-camera.webp",
+    "canonical": "assets/gallery/tecc4-kemudahan-kamera-mikrofon.webp",
+    "evidence": "E60",
+    "hours": 0,
+    "verification": "visual_match_checked",
+    "capture_date": null,
+    "original_source_url": null,
+    "scope": "facility_only",
+    "sha256": "b8245385638c2349145f11b0761f9d4308074fe33e37c8f332f913657c563927"
+  },
+  {
+    "alias": "t4-display.webp",
+    "canonical": "assets/gallery/tecc4-kemudahan-stesen-vr.webp",
+    "evidence": "E60",
+    "hours": 0,
+    "verification": "visual_match_checked",
+    "capture_date": null,
+    "original_source_url": null,
+    "scope": "facility_only",
+    "sha256": "65bc27a3ff8487ffec9e8c572df60416ababd5b801b9f5dc35a7f92100909f55"
+  },
+  {
+    "alias": "t2-collab.webp",
+    "canonical": "assets/part01/t2-collab.webp",
+    "evidence": "E78",
+    "hours": 0,
+    "verification": "visual_match_checked",
+    "capture_date": null,
+    "original_source_url": null,
+    "scope": "facility_only",
+    "sha256": "7d40ff36fdb54e878bd3dd58c44b267cc31f7c75b45eb4fb94f0fc3682c40ec3"
+  },
+  {
+    "alias": "t2-ict.webp",
+    "canonical": "assets/part01/t2-ict.webp",
+    "evidence": "E78",
+    "hours": 0,
+    "verification": "visual_match_checked",
+    "capture_date": null,
+    "original_source_url": null,
+    "scope": "facility_only",
+    "sha256": "7c2e9be3bd865106cf08c5a360bc5ce0240f840da8d3e15fda834aea03f91a3d"
+  },
+  {
+    "alias": "t2-flex.webp",
+    "canonical": "assets/part01/t2-flex.webp",
+    "evidence": "E78",
+    "hours": 0,
+    "verification": "visual_match_checked",
+    "capture_date": null,
+    "original_source_url": null,
+    "scope": "facility_only",
+    "sha256": "8c2d0671cfe2bd42d0b2abddbdacd16a07e722dbc0d94993b9b5a2fea9ca9dcd"
+  }
+]
